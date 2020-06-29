@@ -5,6 +5,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["/src"],
+
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Gatsby + Node.js (TypeScript) API',
