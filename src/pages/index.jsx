@@ -4,6 +4,9 @@ import Fade from 'react-reveal/Fade';
 // Styles
 import 'normalize.css';
 import '../styles/index.scss';
+// icons
+import '../utils/fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Index() {
   const [date, setDate] = useState(null);
@@ -28,6 +31,7 @@ function Index() {
       </section>
       <section>
         <h2>Proyect</h2>
+        <FontAwesomeIcon icon={['fab', 'linkedin']} />
         <div className="container">
           <div className="content">
             <Fade bottom>
