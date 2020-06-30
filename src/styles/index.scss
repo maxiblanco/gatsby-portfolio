@@ -1,6 +1,14 @@
 @font-face {
   font-family: 'Heebo';
-  src: local('Heebo'), url('../assets/Heebo-VariableFont_wght.ttf');
+  src: local('Heebo'),
+    url('../assets/fonts/Heebo-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url('../assets/fonts/Montserrat-VF.woff2') format('woff2');
   font-weight: bold;
 }
 
