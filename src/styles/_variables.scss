@@ -1,13 +1,13 @@
 :root {
   /* Colors */
-  --color-dark: hsl(0, 0%, 2%);
+  --color-dark: hsl(0, 0%, 10%);
   --color-darkish: hsl(0, 0%, 25%);
   --color-lightish: hsl(0, 0%, 90%);
   --color-light: hsl(0, 0%, 98%);
   --color-mid: hsl(0, 0%, 50%);
   --lightgreen: #DDF1E8;
   /* Sizing */
-  --ratio: 1.4;
+  --ratio: 1.414;
   --s-5: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
   --s-4: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
   --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));

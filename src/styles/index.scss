@@ -3,14 +3,13 @@
 @import './resets.scss';
 
 :root {
-  font-family: 'Montserrat', Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
   background: no-repeat center url('../assets/images/weird-circle.svg') transparent;
   height: 100vh;
-  width: auto;
-
+  width: 100%;
 }
 
 .main--container {
@@ -26,6 +25,19 @@ section {
   justify-content: space-around;
 }
 
+.main--container header {
+  margin: var(--s1);
+  display: flex;
+  justify-content: flex-end;
+
+  .toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--color-dark);
+  }
+
+}
+
 
 .center {
   margin-left: auto;
@@ -38,16 +50,24 @@ section {
   letter-spacing: 0.07rem;
 }
 
+.nav--container {
+  margin: var(--s1) 0;
+}
+
 .nav--content {
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex;
   }
 
   li {
     font-size: var(--s1);
     font-weight: 500;
+    color: var(--color-darkish);
+    padding-right: var(--s3);
+    padding-top: var(--s1);
   }
+
 }
 
 
@@ -56,9 +76,50 @@ section {
 }
 
 .message--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-start;
+  margin: var(--s-1) auto;
 
   p {
     font-size: var(--s0);
     font-weight: 400;
+    margin-top: var(--s1);
+    color: var(--color-darkish);
+    max-width: calc(var(--measure) * .6);
+  }
+}
+
+.title--content h1 {
+  color: var(--color-dark);
+  text-shadow: 1px 2px 3px #c3c3c3;
+}
+
+.footer--container {
+  margin: var(--s0) 0;
+}
+
+.footer--content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &>* {
+    padding: var(--s-4);
+  }
+
+  p {
+    font-size: var(--s-1);
+    color: var(--color-darkish)
+  }
+
+  .social-links {
+    svg {
+      font-size: var(--s1);
+      margin: var(--s-4) var(--s-1);
+    }
   }
 }
