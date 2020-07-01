@@ -30,9 +30,13 @@ const Index = () => {
             <div className="nav--content">
               <nav>
                 <ul>
-                  <li>Proyects</li>
+                  <li>
+                    <a href="https://github.com/maxiblanco">Proyects</a>
+                  </li>
                   <li>Blog</li>
-                  <li>Contact</li>
+                  <li>
+                    <a href="mailto:maezblanco@gmail.com">Contact</a>
+                  </li>
                   <li>
                     <a
                       download
