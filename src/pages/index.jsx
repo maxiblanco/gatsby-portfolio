@@ -54,9 +54,11 @@ const Index = () => {
               <p>Every interaction tells a story.</p>
               <p>
                 I’m interested in how technology influences the stories we tell
-                ourselves.
+                each other.
               </p>
-              <p>I want to develop software to make them more engaging.</p>
+              <p>
+                I strive develop software that makes each story more engaging.
+              </p>
               <p>
                 I currently live in Villa Crespo, a neighborhood of Buenos
                 Aires, Argentina.

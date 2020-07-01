@@ -1,5 +1,27 @@
+/* :root {
+  line-height: var(--ratio);
+  font-size: calc(0.333vw + 1em);
+
+  background-color: white;
+  color: var(--color-dark);
+} */
+
 .nav--content nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-color: inherit;
+  color: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  border-style: solid;
+  border-width: 0;
+  border-color: currentColor;
 }

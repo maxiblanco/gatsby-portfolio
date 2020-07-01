@@ -1,26 +1,27 @@
-/* Colors */
-$color-dark: hsl(0, 0%, 2%);
-$color-darkish: hsl(0, 0%, 25%);
-$color-lightish: hsl(0, 0%, 90%);
-$color-light: hsl(0, 0%, 98%);
-$color-mid: hsl(0, 0%, 50%);
-$lightgreen: #DDF1E8;
-
-/* Sizing */
-$ratio: 1.414; // Change ratio to define rithm
-$s-5: calc($s0 / $ratio / $ratio / $ratio / $ratio / $ratio);
-$s-4: calc($s0 / $ratio / $ratio / $ratio / $ratio);
-$s-3: calc($s0 / $ratio / $ratio/ $ratio);
-$s-2: calc($s0 / $ratio / $ratio);
-$s-1: calc($s0 / $ratio);
-$s0: 1rem; // Base
-$s1: calc($s0 * ratio);
-$s2: calc($s0 * ratio * ratio);
-$s3: calc($s0 * ratio * ratio * ratio);
-$s4: calc($s0 * ratio * ratio * ratio * ratio);
-$s5: calc($s0 * ratio * ratio * ratio * ratio * ratio);
-$measure: 65ch; // How long can a line be
-$line-height: $ratio;
-$line-height-small: calc(0.8 * $ratio);
-$border-thin: $s-5;
-$border-thick: $s-2;
+:root {
+  /* Colors */
+  --color-dark: hsl(0, 0%, 2%);
+  --color-darkish: hsl(0, 0%, 25%);
+  --color-lightish: hsl(0, 0%, 90%);
+  --color-light: hsl(0, 0%, 98%);
+  --color-mid: hsl(0, 0%, 50%);
+  --lightgreen: #DDF1E8;
+  /* Sizing */
+  --ratio: 1.4;
+  --s-5: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-4: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-2: calc(var(--s0) / var(--ratio) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s0) * var(--ratio) * var(--ratio));
+  --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
+  --s4: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+  --s5: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+  --measure: 65ch;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.8 * var(--ratio));
+  --border-thin: var(--s-5);
+  --border-thick: var(--s-2);
+}
