@@ -26,6 +26,25 @@ const Index = () => {
           <title>Maximiliano Blanco</title>
         </Helmet>
         <header>
+          <div className="nav--container">
+            <div className="nav--content">
+              <nav>
+                <ul>
+                  <li>Proyects</li>
+                  <li>Blog</li>
+                  <li>Contact</li>
+                  <li>
+                    <a
+                      download
+                      href="../assets/pdf/CV_MaximilianoBlanco_ENG.pdf"
+                    >
+                      CV
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
           <div className="toggle">
             <FontAwesomeIcon
               icon={['fas', 'toggle-off']}
@@ -42,26 +61,7 @@ const Index = () => {
               <h1>A Web Developer.</h1>
             </div>
           </div>
-          <div className="nav--container">
-            <div className="nav--content">
-              <nav>
-                <ul>
-                  <li>Proyects</li>
-                  <li>Blog</li>
-                  <li>Contact</li>
-                  <li>
-                    {' '}
-                    <a
-                      download
-                      href="../assets/pdf/CV_MaximilianoBlanco_ENG.pdf"
-                    >
-                      CV
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+
           <Fade slower>
             <div className="message--container">
               <div className="message--content">
@@ -71,7 +71,8 @@ const Index = () => {
                   tell each other.
                 </p>
                 <p>
-                  I strive develop software that makes each story more engaging.
+                  I strive to develop software that makes each story more
+                  engaging.
                 </p>
               </div>
             </div>
