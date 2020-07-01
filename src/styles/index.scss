@@ -10,12 +10,14 @@ main {
   background: no-repeat center url('../assets/images/weird-circle.svg') transparent;
   height: 100vh;
   width: 100%;
+
 }
 
 .main--container {
   display: flex;
   flex-direction: column;
   height: 100%;
+
 }
 
 section {
@@ -62,7 +64,7 @@ section {
 
   li {
     font-size: var(--s1);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-darkish);
     padding-right: var(--s3);
     padding-top: var(--s1);
@@ -83,7 +85,7 @@ section {
   margin: var(--s-1) auto;
 
   p {
-    font-size: var(--s0);
+    font-size: var(--s1);
     font-weight: 400;
     margin-top: var(--s1);
     color: var(--color-darkish);
