@@ -40,7 +40,7 @@ const Index = () => {
                   <li>
                     <a
                       download
-                      href="../assets/pdf/CV_MaximilianoBlanco_ENG.pdf"
+                      href={`${process.env.PUBLIC_URL}/CV_MaximilianoBlanco_ESP.pdf`}
                     >
                       CV
                     </a>
