@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
 // Styles
-import 'normalize.css';
 import '../styles/index.scss';
 // icons
 import '../utils/fontawesome';
