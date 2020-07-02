@@ -1,5 +1,7 @@
 @charset "utf-8";
+@import './_fonts.scss';
 
 // Variables
+$family-primary: 'Montserrat';
 
 @import '~bulma/bulma.sass';

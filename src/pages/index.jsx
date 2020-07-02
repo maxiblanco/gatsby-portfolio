@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// Components
+import Navbar from '../components/navbar';
 // Styles
 import '../styles/index.scss';
 // icons
 import '../utils/fontawesome';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Index = () => {
-  /*   const [darkMode, toggleDarkMode] = useState(false); */
   const [date, setDate] = useState(null);
   useEffect(() => {
     async function getDate() {
@@ -20,81 +21,110 @@ const Index = () => {
   }, []);
   return (
     <main>
-      <div className="main--container center">
+      <div className="container">
         <Helmet>
           <title>Maximiliano Blanco</title>
         </Helmet>
         <header>
-          <div className="nav--container">
-            <div className="nav--content">
-              <nav>
-                <ul>
-                  <li>
-                    <a href="https://github.com/maxiblanco">Proyects</a>
-                  </li>
-                  <li>Blog</li>
-                  <li>
-                    <a href="mailto:maezblanco@gmail.com">Contact</a>
-                  </li>
-                  <li>
-                    <a
-                      download
-                      href={`${process.env.PUBLIC_URL}/CV_MaximilianoBlanco_ESP.pdf`}
-                    >
-                      CV
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div className="toggle">
-            <FontAwesomeIcon
-              icon={['fas', 'toggle-off']}
-              width="100px"
-              height="100px"
-            />
-            <FontAwesomeIcon icon={['fas', 'toggle-on']} />
+          <div className="container">
+            <Navbar />
           </div>
         </header>
-        <section>
-          <div className="title--container">
-            <div className="title--content">
-              <h1>Hi! I'm Max.</h1>
-              <h1>A Web Developer.</h1>
-            </div>
-          </div>
 
-          <Fade slower>
-            <div className="message--container">
-              <div className="message--content">
-                <p>Every interaction tells a story.</p>
-                <p>
-                  I’m interested in how technology influences the stories we
-                  tell each other.
-                </p>
-                <p>
-                  I strive to develop software that makes each story more
-                  engaging.
-                </p>
+        <section className="section">
+          <div className="hero">
+            <div className="hero-body">
+              <div className="my-4">
+                <h1 className="title is-1 has-text-weight-bold">
+                  Hi! I'm Max.
+                  <br />A Web Developer.
+                </h1>
               </div>
-            </div>
-          </Fade>
-        </section>
-        <footer>
-          <div className="footer--container">
-            <div className="footer--content">
-              <div className="social-links">
-                <a href="https://www.linkedin.com/in/maxiblanco/">
-                  <FontAwesomeIcon icon={['fab', 'linkedin']} />
-                </a>
-                <a href="https://github.com/maxiblanco">
-                  <FontAwesomeIcon icon={['fab', 'github']} />
-                </a>
-              </div>
-              <p>Work in progress by Maximiliano Blanco &#169; 2020</p>
+
+              <Fade slower>
+                <div className="container">
+                  <p className="subtitle is-4">
+                    Every interaction tells a story.
+                  </p>
+                  <p className="subtitle is-4">
+                    I’m interested in how technology influences the stories we
+                    tell each other.
+                  </p>
+                  <p className="subtitle is-4">
+                    I strive to develop software that makes each story more
+                    engaging.
+                  </p>
+                </div>
+              </Fade>
             </div>
           </div>
+        </section>
+        <section className="section">
+          <div className="hero">
+            <div className="hero-body">
+              <div className="columns">
+                <div className=" column is-half">
+                  <div className="media box">
+                    <img
+                      src="https://via.placeholder.com/300.png?text=Project"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="column is-half">
+                  <article className="media box">
+                    <figure>
+                      <img
+                        src="https://via.placeholder.com/200x300.png?text=Project"
+                        alt=""
+                      />
+                    </figure>
+                  </article>
+                </div>
+              </div>
+              <div className="columns">
+                <div className="column is-half">
+                  <article className="media box">
+                    <figure>
+                      <img
+                        src="https://via.placeholder.com/200x300.png?text=Project"
+                        alt=""
+                      />
+                    </figure>
+                  </article>
+                </div>
+                <div className="column is-half">
+                  <article className="media box">
+                    <figure>
+                      <img
+                        src="https://via.placeholder.com/300.png?text=Project"
+                        alt=""
+                      />
+                    </figure>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer className="footer">
+          <div className=" has-text-centered">
+            <a href="https://www.linkedin.com/in/maxiblanco/">
+              <FontAwesomeIcon
+                className="mx-3 my-3 is-size-3"
+                icon={['fab', 'linkedin']}
+              />
+            </a>
+            <a href="https://github.com/maxiblanco">
+              <FontAwesomeIcon
+                className="mx-3 my-3 is-size-3"
+                icon={['fab', 'github']}
+              />
+            </a>
+          </div>
+          <p className="has-text-centered">
+            Work in progress by <strong>Maximiliano Blanco</strong> &#169; 2020
+          </p>
         </footer>
       </div>
     </main>
