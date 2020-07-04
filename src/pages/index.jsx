@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import lottie from 'lottie-web';
 import Navbar from '../components/Navbar';
 import ContactForm from '../components/ContactForm';
+import ProyectCard from '../components/ProyectCard';
 // Styles
 import '../styles/index.scss';
 // assets
@@ -34,6 +35,18 @@ export const query = graphql`
 
 const Index = ({ data }) => {
   const animationContainer = createRef();
+
+  const placeholderProjectData = {
+    image: {
+      src: 'https://via.placeholder.com/300.png?text=Project',
+      alt: 'Placeholder',
+    },
+    title: 'Placeholder project',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam laborum explicabo voluptas dolorem sunt quaerat!',
+    technologies: ['react', 'javascript'],
+  };
+
   useEffect(() => {
     const anim = lottie.loadAnimation({
       container: animationContainer.current,
@@ -63,14 +76,15 @@ const Index = ({ data }) => {
           <div className="hero is-fullheight-with-navbar ">
             <div className="hero-body">
               <div className="container over-lottie">
-                <div className="my-4">
-                  <h1 className="title is-1 has-text-weight-bold">
-                    Hi! I'm Max.
-                    <br />A Web Developer.
-                  </h1>
-                </div>
-
-                <Fade slowest>
+                <Fade>
+                  <div className="my-4">
+                    <h1 className="title is-1 has-text-weight-bold">
+                      Hi! I'm Max.
+                      <br />A Web Developer.
+                    </h1>
+                  </div>
+                </Fade>
+                <Fade slower>
                   <div className="container">
                     <p className="subtitle is-4">
                       Every interaction tells a story.
@@ -94,133 +108,19 @@ const Index = ({ data }) => {
             <div className="hero-body">
               <div className="container">
                 <div className="columns">
-                  <div className="column ">
-                    <article className="card">
-                      <div className="card-image">
-                        <figure>
-                          <img
-                            src="https://via.placeholder.com/300.png?text=Project"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
-                      <div className="card-content">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Ipsa asperiores dignissimos tenetur nulla ea esse
-                        quia nam dicta aut at.
-                      </div>
-                      <footer className="card-footer">
-                        <button
-                          type="button"
-                          className="button card-footer-item"
-                        >
-                          Code
-                        </button>
-                        <button
-                          type="button"
-                          className="button card-footer-item"
-                        >
-                          Demo
-                        </button>
-                      </footer>
-                    </article>
+                  <div className="column">
+                    <ProyectCard {...placeholderProjectData} />
                   </div>
-                  <div className="column ">
-                    <div>
-                      <article className="card">
-                        <div className="card-image">
-                          <figure>
-                            <img
-                              src="https://via.placeholder.com/200x300.png?text=Project"
-                              alt=""
-                            />
-                          </figure>
-                        </div>
-                        <div className="card-content">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. Impedit blanditiis explicabo consequuntur neque
-                          quidem a distinctio fugiat natus sed reiciendis.
-                        </div>
-                        <footer className="card-footer">
-                          <button
-                            type="button"
-                            className="button card-footer-item"
-                          >
-                            Code
-                          </button>
-                          <button
-                            type="button"
-                            className="button card-footer-item"
-                          >
-                            Demo
-                          </button>
-                        </footer>
-                      </article>
-                    </div>
+                  <div className="column">
+                    <ProyectCard {...placeholderProjectData} />
                   </div>
                 </div>
                 <div className="columns">
                   <div className="column">
-                    <article className="card">
-                      <div className="card-image">
-                        <figure>
-                          <img
-                            src="https://via.placeholder.com/200x300.png?text=Project"
-                            alt=""
-                          />
-                        </figure>
-                        <div className="card-content">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ipsa asperiores dignissimos tenetur nulla ea
-                          esse quia nam dicta aut at.
-                        </div>
-                        <footer className="card-footer">
-                          <button
-                            type="button"
-                            className="button card-footer-item"
-                          >
-                            Code
-                          </button>
-                          <button
-                            type="button"
-                            className="button card-footer-item"
-                          >
-                            Demo
-                          </button>
-                        </footer>
-                      </div>
-                    </article>
+                    <ProyectCard {...placeholderProjectData} />
                   </div>
-                  <div className="column ">
-                    <article className="card">
-                      <div className="card-image">
-                        <figure>
-                          <img
-                            src="https://via.placeholder.com/300.png?text=Project"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
-                      <div className="card-content">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Et in debitis a consequuntur libero ea excepturi
-                        blanditiis quam aspernatur ipsum?
-                      </div>
-                      <footer className="card-footer">
-                        <button
-                          type="button"
-                          className="button card-footer-item"
-                        >
-                          Code
-                        </button>
-                        <button
-                          type="button"
-                          className="button card-footer-item"
-                        >
-                          Demo
-                        </button>
-                      </footer>
-                    </article>
+                  <div className="column">
+                    <ProyectCard {...placeholderProjectData} />
                   </div>
                 </div>
               </div>
