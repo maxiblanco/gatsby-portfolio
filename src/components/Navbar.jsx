@@ -17,7 +17,7 @@ const Navbar = () => {
             className="button is-white"
             onClick={() => scrollTo('#projects')}
           >
-            <p>Proyects</p>
+            <p>Projects</p>
           </button>
         </li>
         <li className="level-item">

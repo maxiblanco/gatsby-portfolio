@@ -1,7 +1,7 @@
 import React, { useEffect, createRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
-import Img from 'gatsby-image';
+/* import Img from 'gatsby-image'; */
 import { graphql } from 'gatsby';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +13,7 @@ import ContactForm from '../components/ContactForm';
 import '../styles/index.scss';
 // assets
 import '../utils/fontawesome';
-import animatedBlob from '../assets/animations/animated-blob.json';
+import animatedBlob from '../assets/animations/faster-blob-animation.json';
 
 export const query = graphql`
   query {
@@ -46,7 +46,13 @@ const Index = ({ data }) => {
   }, []);
   return (
     <main className="has-navbar-fixed-top">
-      <div className="container">
+      <div id="wrapper" className="container">
+        <div className="absolute-container">
+          <div className="sticky-container">
+            <div className="animation-container" ref={animationContainer} />
+          </div>
+        </div>
+
         <Helmet>
           <title>Maximiliano Blanco</title>
         </Helmet>
@@ -54,10 +60,9 @@ const Index = ({ data }) => {
         <Navbar />
 
         <section id="introduction" className="section">
-          <div className="hero is-fullheight-with-navbar">
-            <div className="animation-container" ref={animationContainer} />
+          <div className="hero is-fullheight-with-navbar ">
             <div className="hero-body">
-              <div className="container">
+              <div className="container over-lottie">
                 <div className="my-4">
                   <h1 className="title is-1 has-text-weight-bold">
                     Hi! I'm Max.
@@ -65,7 +70,7 @@ const Index = ({ data }) => {
                   </h1>
                 </div>
 
-                <Fade slower>
+                <Fade slowest>
                   <div className="container">
                     <p className="subtitle is-4">
                       Every interaction tells a story.
@@ -89,44 +94,132 @@ const Index = ({ data }) => {
             <div className="hero-body">
               <div className="container">
                 <div className="columns">
-                  <div className=" column is-half">
-                    <div className="media box">
-                      <img
-                        src="https://via.placeholder.com/300.png?text=Project"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="column is-half">
-                    <article className="media box">
-                      <figure>
-                        <img
-                          src="https://via.placeholder.com/200x300.png?text=Project"
-                          alt=""
-                        />
-                      </figure>
+                  <div className="column ">
+                    <article className="card">
+                      <div className="card-image">
+                        <figure>
+                          <img
+                            src="https://via.placeholder.com/300.png?text=Project"
+                            alt=""
+                          />
+                        </figure>
+                      </div>
+                      <div className="card-content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Ipsa asperiores dignissimos tenetur nulla ea esse
+                        quia nam dicta aut at.
+                      </div>
+                      <footer className="card-footer">
+                        <button
+                          type="button"
+                          className="button card-footer-item"
+                        >
+                          Code
+                        </button>
+                        <button
+                          type="button"
+                          className="button card-footer-item"
+                        >
+                          Demo
+                        </button>
+                      </footer>
                     </article>
+                  </div>
+                  <div className="column ">
+                    <div>
+                      <article className="card">
+                        <div className="card-image">
+                          <figure>
+                            <img
+                              src="https://via.placeholder.com/200x300.png?text=Project"
+                              alt=""
+                            />
+                          </figure>
+                        </div>
+                        <div className="card-content">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Impedit blanditiis explicabo consequuntur neque
+                          quidem a distinctio fugiat natus sed reiciendis.
+                        </div>
+                        <footer className="card-footer">
+                          <button
+                            type="button"
+                            className="button card-footer-item"
+                          >
+                            Code
+                          </button>
+                          <button
+                            type="button"
+                            className="button card-footer-item"
+                          >
+                            Demo
+                          </button>
+                        </footer>
+                      </article>
+                    </div>
                   </div>
                 </div>
                 <div className="columns">
-                  <div className="column is-half">
-                    <article className="media box">
-                      <figure>
-                        <img
-                          src="https://via.placeholder.com/200x300.png?text=Project"
-                          alt=""
-                        />
-                      </figure>
+                  <div className="column">
+                    <article className="card">
+                      <div className="card-image">
+                        <figure>
+                          <img
+                            src="https://via.placeholder.com/200x300.png?text=Project"
+                            alt=""
+                          />
+                        </figure>
+                        <div className="card-content">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Ipsa asperiores dignissimos tenetur nulla ea
+                          esse quia nam dicta aut at.
+                        </div>
+                        <footer className="card-footer">
+                          <button
+                            type="button"
+                            className="button card-footer-item"
+                          >
+                            Code
+                          </button>
+                          <button
+                            type="button"
+                            className="button card-footer-item"
+                          >
+                            Demo
+                          </button>
+                        </footer>
+                      </div>
                     </article>
                   </div>
-                  <div className="column is-half">
-                    <article className="media box">
-                      <figure>
-                        <img
-                          src="https://via.placeholder.com/300.png?text=Project"
-                          alt=""
-                        />
-                      </figure>
+                  <div className="column ">
+                    <article className="card">
+                      <div className="card-image">
+                        <figure>
+                          <img
+                            src="https://via.placeholder.com/300.png?text=Project"
+                            alt=""
+                          />
+                        </figure>
+                      </div>
+                      <div className="card-content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Et in debitis a consequuntur libero ea excepturi
+                        blanditiis quam aspernatur ipsum?
+                      </div>
+                      <footer className="card-footer">
+                        <button
+                          type="button"
+                          className="button card-footer-item"
+                        >
+                          Code
+                        </button>
+                        <button
+                          type="button"
+                          className="button card-footer-item"
+                        >
+                          Demo
+                        </button>
+                      </footer>
                     </article>
                   </div>
                 </div>
@@ -137,16 +230,18 @@ const Index = ({ data }) => {
         <section id="contact" className="section">
           <div className="container hero is-fullheight-with-navbar">
             <div className="columns hero-body">
-              <div className="column">
+              {/*               <div className="column">
                 <Img fixed={data.file.childImageSharp.fixed} />
-              </div>
-              <div className="box">
-                <ContactForm data={data} className="column" />
+              </div> */}
+              <div className="box column">
+                <ContactForm data={data} />
               </div>
             </div>
           </div>
         </section>
-        <footer className="footer">
+      </div>
+      <footer className="footer">
+        <div className="container over-lottie">
           <div className="has-text-centered">
             <a href="https://www.linkedin.com/in/maxiblanco/">
               <FontAwesomeIcon
@@ -164,8 +259,8 @@ const Index = ({ data }) => {
           <p className="has-text-centered">
             Work in progress by <strong>Maximiliano Blanco</strong> &#169; 2020
           </p>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </main>
   );
 };

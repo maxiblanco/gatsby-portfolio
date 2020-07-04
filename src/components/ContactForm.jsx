@@ -55,40 +55,49 @@ const ContactForm = ({ data }) => {
   return (
     <form onSubmit={handleOnSubmit}>
       <h3 className="title is-3">Contact me!</h3>
-
-      <label className="label" htmlFor="email">
-        Email
-        <input
-          className="input"
-          type="email"
-          id="email"
-          name="_replyto"
-          onChange={handleOnChange}
-          required
-          value={inputs.email}
-        />
-      </label>
-      <label className="label" htmlFor="message">
-        Message
-        <textarea
-          className="textarea"
-          name="message"
-          id="message"
-          onChange={handleOnChange}
-          required
-          value={inputs.message}
-        />
-      </label>
-      <button className="button" type="submit" disabled={status.submitting}>
-        {
-          // eslint-disable-next-line no-nested-ternary
-          !status.submitting
-            ? !status.submitted
-              ? 'Submit'
-              : 'Submitted'
-            : 'Submitting...'
-        }
-      </button>
+      <div className="field">
+        <label className="label" htmlFor="email">
+          Email
+          <div className="control">
+            <input
+              className="input"
+              type="email"
+              id="email"
+              name="_replyto"
+              onChange={handleOnChange}
+              required
+              value={inputs.email}
+            />
+          </div>
+        </label>
+      </div>
+      <div className="field">
+        <label className="label" htmlFor="message">
+          Message
+          <textarea
+            className="textarea"
+            name="message"
+            id="message"
+            onChange={handleOnChange}
+            required
+            value={inputs.message}
+          />
+        </label>
+      </div>
+      <div className="field">
+        <div className="control">
+          <button className="button" type="submit" disabled={status.submitting}>
+            {
+              // eslint-disable-next-line no-nested-ternary
+              !status.submitting
+                ? !status.submitted
+                  ? 'Submit'
+                  : 'Submitted'
+                : 'Submitting...'
+            }
+          </button>
+        </div>
+      </div>
     </form>
   );
 };
