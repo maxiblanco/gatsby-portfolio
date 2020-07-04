@@ -1,5 +1,6 @@
 import React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { Link } from 'gatsby';
 // Components
 import DarkModeToggle from './DarkModeToggle';
 // assets
@@ -8,46 +9,65 @@ import espCV from '../assets/pdf/CV_MaximilianoBlanco_ESP.pdf';
 
 const Navbar = () => {
   return (
-    <nav className="level navbar is-fixed-top is-transparent is-spaced">
-      <div className="level-right" />
-      <ul className="level-left">
-        <li className="level-item">
-          <button
-            type="button"
-            className="button is-white"
-            onClick={() => scrollTo('#projects')}
-          >
-            <p>Projects</p>
-          </button>
-        </li>
-        <li className="level-item">
-          <button type="button" className="button is-white">
-            <p>Writings</p>
-          </button>
-        </li>
-        <li className="level-item">
-          <button
-            type="button"
-            className="button is-white"
-            onClick={() => scrollTo('#contact')}
-          >
-            <p>Contact</p>
-          </button>
-        </li>
-        <li className="level-item">
-          <button
-            type="button"
-            className="button is-white"
-            download
-            href={engCV}
-          >
-            <p>CV</p>
-          </button>
-        </li>
-        <li className="level-item">
-          <DarkModeToggle />
-        </li>
-      </ul>
+    <nav
+      className="navbar is-fixed-top is-transparent is-spaced"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div className="navbar-brand">
+        <div
+          role="button"
+          className="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </div>
+      </div>
+      <div className="navbar-menu">
+        <ul className="navbar-end">
+          <li className="navbar-item">
+            <button
+              type="button"
+              className="button is-white"
+              onClick={() => scrollTo('#projects')}
+            >
+              <p>Projects</p>
+            </button>
+          </li>
+          <li className="navbar-item">
+            <Link to="blog">
+              <button type="button" className="button is-white">
+                <p>Writings</p>
+              </button>
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <button
+              type="button"
+              className="button is-white"
+              onClick={() => scrollTo('#contact')}
+            >
+              <p>Contact</p>
+            </button>
+          </li>
+          <li className="navbar-item">
+            <button
+              type="button"
+              className="button is-white"
+              download
+              href={engCV}
+            >
+              <p>CV</p>
+            </button>
+          </li>
+          <li className="navbar-item">
+            <DarkModeToggle />
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
