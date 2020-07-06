@@ -1,7 +1,7 @@
-import React, { useEffect, createRef } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
-/* import Img from 'gatsby-image'; */
+import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +18,19 @@ import animatedBlob from '../assets/animations/faster-blob-animation.json';
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "maxi-peep-happy.png" }) {
+    happy: file(relativePath: { eq: "maxi-peep-happy.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 200, height: 300) {
+          src
+          srcSet
+          width
+          height
+        }
+      }
+    }
+    masked: file(relativePath: { eq: "maxi-peep-masked.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
@@ -35,10 +47,10 @@ export const query = graphql`
 
 const Index = ({ data }) => {
   const animationContainer = createRef();
-
+  const [isImageHovered, setImageHovered] = useState(false);
   const placeholderProjectData = {
     image: {
-      src: 'https://via.placeholder.com/300.png?text=Project',
+      src: '/gifs/healthy_dev_v01.gif',
       alt: 'Placeholder',
     },
     title: 'Placeholder project',
@@ -57,6 +69,7 @@ const Index = ({ data }) => {
     });
     return () => anim.destroy(); // optional clean up for unmounting
   }, []);
+
   return (
     <main className="has-navbar-fixed-top">
       <div id="wrapper" className="container">
@@ -76,29 +89,44 @@ const Index = ({ data }) => {
           <div className="hero is-fullheight-with-navbar ">
             <div className="hero-body">
               <div className="container over-lottie">
-                <Fade>
-                  <div className="my-4">
-                    <h1 className="title is-1 has-text-weight-bold">
-                      Hi! I'm Max.
-                      <br />A Web Developer.
-                    </h1>
+                <div className="columns">
+                  <div
+                    className="column is-one-quarter is-hidden-mobile"
+                    onMouseEnter={() => setImageHovered(true)}
+                    onMouseLeave={() => setImageHovered(false)}
+                  >
+                    {isImageHovered ? (
+                      <Img fixed={data.masked.childImageSharp.fixed} />
+                    ) : (
+                      <Img fixed={data.happy.childImageSharp.fixed} />
+                    )}
                   </div>
-                </Fade>
+                  <div className="column ">
+                    <Fade>
+                      <div className="my-4">
+                        <h1 className="title is-1 has-text-weight-bold">
+                          Hi! I'm Max.
+                          <br />A Web Developer.
+                        </h1>
+                      </div>
+                    </Fade>
                     <Fade top cascade>
-                  <div className="container">
-                    <p className="subtitle is-4">
-                      Every interaction tells a story.
-                    </p>
-                    <p className="subtitle is-4">
+                      <div className="container">
+                        <p className="subtitle is-4">
+                          Every interaction tells a story.
+                        </p>
+                        <p className="subtitle is-4">
                           I’m interested in how technology influences the
                           stories we tell each other.
-                    </p>
-                    <p className="subtitle is-4">
+                        </p>
+                        <p className="subtitle is-4">
                           I strive to develop software that makes each story
                           more engaging.
-                    </p>
+                        </p>
+                      </div>
+                    </Fade>
                   </div>
-                </Fade>
+                </div>
               </div>
             </div>
           </div>
@@ -129,11 +157,8 @@ const Index = ({ data }) => {
         </section>
         <section id="contact" className="section">
           <div className="container hero is-fullheight-with-navbar">
-            <div className="columns hero-body">
-              {/*               <div className="column">
-                <Img fixed={data.file.childImageSharp.fixed} />
-              </div> */}
-              <div className="box column">
+            <div className="columns hero-body is-centered">
+              <div className="box column is-three-quarters">
                 <ContactForm data={data} />
               </div>
             </div>

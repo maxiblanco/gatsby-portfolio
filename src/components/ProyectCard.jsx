@@ -9,7 +9,7 @@ const ProyectCard = ({ image = {}, title, description, technologies = {} }) => (
     </div>
     <div className="card-image">
       <figure>
-        <img src={image.src} alt={image.alt} />
+        <img src={image.src} alt={image.alt} width="200px" />
       </figure>
     </div>
     <div className="card-content">
