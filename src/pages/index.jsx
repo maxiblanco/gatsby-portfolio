@@ -84,18 +84,18 @@ const Index = ({ data }) => {
                     </h1>
                   </div>
                 </Fade>
-                <Fade slower>
+                    <Fade top cascade>
                   <div className="container">
                     <p className="subtitle is-4">
                       Every interaction tells a story.
                     </p>
                     <p className="subtitle is-4">
-                      I’m interested in how technology influences the stories we
-                      tell each other.
+                          I’m interested in how technology influences the
+                          stories we tell each other.
                     </p>
                     <p className="subtitle is-4">
-                      I strive to develop software that makes each story more
-                      engaging.
+                          I strive to develop software that makes each story
+                          more engaging.
                     </p>
                   </div>
                 </Fade>
