@@ -61,7 +61,7 @@ const Index = ({ data }) => {
 
   const healthyProjectData = {
     image: {
-      src: '/gifs/healthy_dev_v01.gif',
+      src: '/healthy_dev_v01.gif',
       alt: 'Healthy Dev Web App',
     },
     title: 'Healthy Dev Web App',
@@ -72,7 +72,7 @@ const Index = ({ data }) => {
 
   const travelJournalProjectData = {
     image: {
-      src: '/gifs/travel_journal_v01.gif',
+      src: '/travel_journal_v01.gif',
       alt: 'Travel Journal Web App',
     },
     title: 'Travel Journal Web App',
