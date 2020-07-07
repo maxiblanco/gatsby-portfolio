@@ -50,13 +50,35 @@ const Index = ({ data }) => {
   const [isImageHovered, setImageHovered] = useState(false);
   const placeholderProjectData = {
     image: {
-      src: '/gifs/healthy_dev_v01.gif',
+      src: 'https://placeholder.pics/svg/200x300',
       alt: 'Placeholder',
     },
     title: 'Placeholder project',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam laborum explicabo voluptas dolorem sunt quaerat!',
     technologies: ['react', 'javascript'],
+  };
+
+  const healthyProjectData = {
+    image: {
+      src: '/gifs/healthy_dev_v01.gif',
+      alt: 'Healthy Dev Web App',
+    },
+    title: 'Healthy Dev Web App',
+    description:
+      'Web app to share news and tips. Community development with mentor guidance',
+    technologies: ['react', 'redux', 'redux-sagas'],
+  };
+
+  const travelJournalProjectData = {
+    image: {
+      src: '/gifs/travel_journal_v01.gif',
+      alt: 'Travel Journal Web App',
+    },
+    title: 'Travel Journal Web App',
+    description:
+      'Web app to share travel stories built with Node.js and Express.',
+    technologies: ['Node.js', 'Express', 'javascript'],
   };
 
   useEffect(() => {
@@ -131,16 +153,16 @@ const Index = ({ data }) => {
             </div>
           </div>
         </section>
-        <section id="projects" className="section">
-          <div className="hero is-fullheight">
-            <div className="hero-body">
+        <section id="projects" className="section ">
+          <div className="hero is-fullheight ">
+            <div className="hero-body ">
               <div className="container">
-                <div className="columns">
+                <div className="columns is-vcentered">
                   <div className="column">
-                    <ProyectCard {...placeholderProjectData} />
+                    <ProyectCard {...healthyProjectData} />
                   </div>
                   <div className="column">
-                    <ProyectCard {...placeholderProjectData} />
+                    <ProyectCard {...travelJournalProjectData} />
                   </div>
                 </div>
                 <div className="columns">
