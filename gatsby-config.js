@@ -28,6 +28,34 @@ module.exports = {
         path: path.join(__dirname, 'src', 'assets', 'images'),
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-prismjs',
+          'gatsby-remark-images',
+          'gatsby-remark-embedder',
+          'gatsby-plugin-catch-links',
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `${__dirname}/src/pages`,
+              name: 'pages',
+            },
+          },
+        ],
+      },
+    },
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-smoothscroll',
     'gatsby-plugin-sharp',
