@@ -4,8 +4,10 @@ import { Link } from 'gatsby';
 // Components
 import DarkModeToggle from './DarkModeToggle';
 // assets
+/* 
 import engCV from '../assets/pdf/CV_MaximilianoBlanco_ENG.pdf';
-import espCV from '../assets/pdf/CV_MaximilianoBlanco_ESP.pdf';
+import espCV from '../assets/pdf/CV_MaximilianoBlanco_ESP.pdf'; 
+*/
 
 const Navbar = () => {
   return (
