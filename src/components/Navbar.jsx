@@ -39,7 +39,11 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
             <Link to="blog">
-              <button type="button" className="button is-white">
+              <button
+                type="button"
+                className="button is-white disabled"
+                disabled
+              >
                 <p>Writings</p>
               </button>
             </Link>

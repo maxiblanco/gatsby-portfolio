@@ -1,11 +1,37 @@
 import React, { useEffect, createRef } from 'react';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import lottie from 'lottie-web';
 import animatedBlob from '../assets/animations/faster-blob-animation.json';
+import PostLink from '../components/PostLink';
 
-const BlogPage = () => {
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          internal {
+            content
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+          }
+        }
+      }
+    }
+  }
+`;
+
+const BlogPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
   const animationContainer = createRef();
   useEffect(() => {
     const anim = lottie.loadAnimation({
@@ -34,13 +60,16 @@ const BlogPage = () => {
           <div className="hero is-fullheight-with-navbar ">
             <div className="hero-body">
               <div className="container over-lottie">
-                <Fade>
-                  <div className="my-4">
-                    <h1 className="title is-1 has-text-weight-bold">
-                      In progress...
-                    </h1>
-                  </div>
-                </Fade>
+                <div className="my-4">
+                  <h4 className="title is-4 has-text-weight-bold">
+                    {edges &&
+                      edges.map((edge) => (
+                        <Fade>
+                          <PostLink key={edge.node.id} post={edge.node} />
+                        </Fade>
+                      ))}
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
