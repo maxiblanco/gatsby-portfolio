@@ -31,7 +31,7 @@ const Navbar = () => {
           <li className="navbar-item">
             <button
               type="button"
-              className="button is-white"
+              className="button is-white is-medium"
               onClick={() => scrollTo('#projects')}
             >
               <p>Projects</p>
@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link to="blog">
               <button
                 type="button"
-                className="button is-white disabled"
+                className="button is-white disabled is-medium"
                 disabled
               >
                 <p>Writings</p>
@@ -51,20 +51,21 @@ const Navbar = () => {
           <li className="navbar-item">
             <button
               type="button"
-              className="button is-white"
+              className="button is-white is-medium"
               onClick={() => scrollTo('#contact')}
             >
               <p>Contact</p>
             </button>
           </li>
           <li className="navbar-item">
-            <button
-              type="button"
-              className="button is-white"
-              download
-              href={engCV}
-            >
-              <p>CV</p>
+            <button type="button" className="button is-white is-medium ">
+              <a
+                download
+                href="/CV_MaximilianoBlanco_ENG.pdf"
+                className="has-text-black"
+              >
+                <p>CV</p>
+              </a>
             </button>
           </li>
           <li className="navbar-item">
