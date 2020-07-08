@@ -1,8 +1,10 @@
 import React, { useState, useEffect, createRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Components
@@ -15,6 +17,13 @@ import '../styles/index.scss';
 // assets
 import '../utils/fontawesome';
 import animatedBlob from '../assets/animations/faster-blob-animation.json';
+// data
+import {
+  healthyProjectData,
+  travelJournalProjectData,
+  travelMapProjectData,
+  chatbotProjectData,
+} from '../data/ProjectData';
 
 export const query = graphql`
   query {
@@ -48,38 +57,6 @@ export const query = graphql`
 const Index = ({ data }) => {
   const animationContainer = createRef();
   const [isImageHovered, setImageHovered] = useState(false);
-  const placeholderProjectData = {
-    image: {
-      src: 'https://placeholder.pics/svg/200x300',
-      alt: 'Placeholder',
-    },
-    title: 'Placeholder project',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam laborum explicabo voluptas dolorem sunt quaerat!',
-    technologies: ['react', 'javascript'],
-  };
-
-  const healthyProjectData = {
-    image: {
-      src: 'https://media.giphy.com/media/chE11KhoG6Y7ysmfMc/giphy.gif',
-      alt: 'Healthy Dev Web App',
-    },
-    title: 'Healthy Dev Web App',
-    description:
-      'Web app to share news and tips. Community development with mentor guidance',
-    technologies: ['react', 'redux', 'redux-sagas'],
-  };
-
-  const travelJournalProjectData = {
-    image: {
-      src: 'https://media.giphy.com/media/dyRfopPsLDHk2SwfOK/giphy.gif',
-      alt: 'Travel Journal Web App',
-    },
-    title: 'Travel Journal Web App',
-    description:
-      'Web app to share travel stories built with Node.js and Express.',
-    technologies: ['Node.js', 'Express', 'javascript'],
-  };
 
   useEffect(() => {
     const anim = lottie.loadAnimation({
@@ -113,7 +90,7 @@ const Index = ({ data }) => {
               <div className="container over-lottie">
                 <div className="columns">
                   <div
-                    className="column is-one-quarter is-hidden-mobile"
+                    className="column is-one-quarter is-hidden-touch"
                     onMouseEnter={() => setImageHovered(true)}
                     onMouseLeave={() => setImageHovered(false)}
                   >
@@ -149,6 +126,20 @@ const Index = ({ data }) => {
                     </Fade>
                   </div>
                 </div>
+                <Flip top>
+                  <button
+                    type="button"
+                    className="button mt-6 is-rounded more-button is-large is-pulled-right has-text-light has-background-grey-dark is-hidden-touch"
+                    onClick={() => scrollTo('#projects')}
+                  >
+                    <span>Projects</span>
+
+                    <FontAwesomeIcon
+                      className="ml-3 is-size-4"
+                      icon={['fa', 'eye']}
+                    />
+                  </button>
+                </Flip>
               </div>
             </div>
           </div>
@@ -167,10 +158,10 @@ const Index = ({ data }) => {
                 </div>
                 <div className="columns">
                   <div className="column">
-                    <ProyectCard {...placeholderProjectData} />
+                    <ProyectCard {...travelMapProjectData} />
                   </div>
                   <div className="column">
-                    <ProyectCard {...placeholderProjectData} />
+                    <ProyectCard {...chatbotProjectData} />
                   </div>
                 </div>
               </div>

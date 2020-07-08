@@ -6,7 +6,11 @@ import {
   faJs,
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
-import { faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons';
+import {
+  faToggleOn,
+  faToggleOff,
+  faEye,
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faLinkedin,
@@ -15,5 +19,6 @@ library.add(
   faToggleOff,
   faNode,
   faJs,
-  faReact
+  faReact,
+  faEye
 );
