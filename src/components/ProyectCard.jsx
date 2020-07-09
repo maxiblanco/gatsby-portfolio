@@ -12,7 +12,7 @@ const ProyectCard = ({ image = {}, title, description, technologies = {} }) => (
       <div className="column">
         <div className="card-image mx-4">
           <figure>
-            <img src={image.src} alt={image.alt} width="200px" />
+            <img src={image.src} alt={image.alt} />
           </figure>
         </div>
       </div>

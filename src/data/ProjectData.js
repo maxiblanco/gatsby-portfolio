@@ -11,7 +11,7 @@ export const healthyProjectData = {
 
 export const travelJournalProjectData = {
   image: {
-    src: 'https://media.giphy.com/media/dyRfopPsLDHk2SwfOK/giphy.gif',
+    src: 'https://media.giphy.com/media/hsmNaccrdvP8sIKkDo/giphy.gif',
     alt: 'Travel Journal Web App',
   },
   title: 'Travel Journal Web App',
