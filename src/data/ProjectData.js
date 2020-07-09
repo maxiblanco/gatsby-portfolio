@@ -1,6 +1,7 @@
 export const healthyProjectData = {
   image: {
-    src: 'https://media.giphy.com/media/chE11KhoG6Y7ysmfMc/giphy.gif',
+    gif: 'https://media.giphy.com/media/chE11KhoG6Y7ysmfMc/giphy.gif',
+    src: '../assets/images/healthy-dev-frame.png',
     alt: 'Healthy Dev Web App',
   },
   title: 'Healthy Dev Web App',
@@ -11,7 +12,8 @@ export const healthyProjectData = {
 
 export const travelJournalProjectData = {
   image: {
-    src: 'https://media.giphy.com/media/hsmNaccrdvP8sIKkDo/giphy.gif',
+    gif: 'https://media.giphy.com/media/hsmNaccrdvP8sIKkDo/giphy.gif',
+    src: '../assets/images/travel-journal-frame.png',
     alt: 'Travel Journal Web App',
   },
   title: 'Travel Journal Web App',
@@ -22,7 +24,8 @@ export const travelJournalProjectData = {
 
 export const chatbotProjectData = {
   image: {
-    src: 'https://media.giphy.com/media/Kfl1NveFi8QAG9MZHF/giphy.gif',
+    gif: 'https://media.giphy.com/media/Kfl1NveFi8QAG9MZHF/giphy.gif',
+    src: '../assets/images/firechat_frame.png',
     alt: 'Chatbot image',
   },
   title: 'Firebot',
@@ -33,7 +36,8 @@ export const chatbotProjectData = {
 
 export const travelMapProjectData = {
   image: {
-    src: 'https://media.giphy.com/media/hVIUhNFlzZjobrwkZy/giphy.gif',
+    gif: 'https://media.giphy.com/media/hVIUhNFlzZjobrwkZy/giphy.gif',
+    src: '../assets/images/map-frame.png',
     alt: 'Travel Map',
   },
   title: 'Travel Map',

@@ -54,7 +54,7 @@ const ContactForm = ({ data }) => {
   };
   return (
     <form onSubmit={handleOnSubmit}>
-      <h3 className="title is-3">Contact me!</h3>
+      <h3 className="title is-3 has-text-centered">Contact me!</h3>
       <div className="field">
         <label className="label" htmlFor="email">
           Email
