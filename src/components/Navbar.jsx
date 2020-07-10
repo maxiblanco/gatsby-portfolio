@@ -28,12 +28,12 @@ const Navbar = () => {
           <span aria-hidden="true" />
         </div>
       </div>
-      <div className="navbar-menu">
-        <ul className="navbar-end">
+      <div className="navbar-menu ">
+        <ul className="navbar-end ">
           <li className="navbar-item">
             <button
               type="button"
-              className="button is-white is-medium"
+              className="button is-white is-medium has-text-weight-semibold"
               onClick={() => scrollTo('#projects')}
             >
               <p>Projects</p>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link to="blog">
               <button
                 type="button"
-                className="button is-white disabled is-medium"
+                className="button is-white disabled is-medium has-text-weight-semibold"
                 disabled
               >
                 <p>Writings</p>
@@ -53,14 +53,17 @@ const Navbar = () => {
           <li className="navbar-item">
             <button
               type="button"
-              className="button is-white is-medium"
+              className="button is-white is-medium has-text-weight-semibold"
               onClick={() => scrollTo('#contact')}
             >
               <p>Contact</p>
             </button>
           </li>
           <li className="navbar-item">
-            <button type="button" className="button is-white is-medium ">
+            <button
+              type="button"
+              className="button is-white is-medium has-text-weight-semibold"
+            >
               <a
                 download
                 href="/CV_MaximilianoBlanco_ENG.pdf"

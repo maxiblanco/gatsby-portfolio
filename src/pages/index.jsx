@@ -72,6 +72,7 @@ const Index = ({ data }) => {
   return (
     <main className="has-navbar-fixed-top">
       <div id="wrapper" className="container">
+        <Navbar />
         <div className="absolute-container">
           <div className="sticky-container">
             <div className="animation-container" ref={animationContainer} />
@@ -81,8 +82,6 @@ const Index = ({ data }) => {
         <Helmet>
           <title>Maximiliano Blanco</title>
         </Helmet>
-
-        <Navbar />
 
         <section id="introduction" className="section">
           <div className="hero is-fullheight-with-navbar ">

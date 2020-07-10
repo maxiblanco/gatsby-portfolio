@@ -7,7 +7,7 @@ export const healthyProjectData = {
   },
   title: 'Healthy Dev Web App',
   description:
-    'Web app to share news and tips. Community development with mentor guidance',
+    'Web app to share health related tips. Front End Cafe - Community development. Made in group with mentor guidance. Role: Frontend Developer.',
   technologies: ['ReactJS', 'Redux', 'Redux-Saga', 'Sass'],
   repo: 'https://github.com/maxiblanco/healthy-front',
 };

@@ -122,17 +122,16 @@ main {
 }
 
 article.card:hover {
-  transition: all 0.7s;
+  transition: all 1s ease-in-out;
 
   .card-image img {
-    opacity: 1;
-    z-index: 999;
     transform: scale(1.04);
     filter: grayscale(0%);
   }
 
   .visible-on-hover {
     opacity: 1;
+    z-index: 999;
   }
 }
 
@@ -152,8 +151,8 @@ article.card:hover {
 .nocolor img {
   filter: grayscale(100%);
   transition: filter 1s;
+}
 
-  /*   &:hover {
-    filter: grayscale(0%);
-  } */
+nav .navbar {
+  z-index: 999;
 }
