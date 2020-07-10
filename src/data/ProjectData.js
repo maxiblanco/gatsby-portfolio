@@ -1,4 +1,5 @@
 export const healthyProjectData = {
+  alias: 'healthy',
   image: {
     gif: 'https://media.giphy.com/media/chE11KhoG6Y7ysmfMc/giphy.gif',
     src: '../assets/images/healthy-dev-frame.png',
@@ -7,10 +8,12 @@ export const healthyProjectData = {
   title: 'Healthy Dev Web App',
   description:
     'Web app to share news and tips. Community development with mentor guidance',
-  technologies: ['react', 'redux', 'redux-sagas'],
+  technologies: ['ReactJS', 'Redux', 'Redux-Saga', 'Sass'],
+  repo: 'https://github.com/maxiblanco/healthy-front',
 };
 
 export const travelJournalProjectData = {
+  alias: 'journal',
   image: {
     gif: 'https://media.giphy.com/media/hsmNaccrdvP8sIKkDo/giphy.gif',
     src: '../assets/images/travel-journal-frame.png',
@@ -19,10 +22,12 @@ export const travelJournalProjectData = {
   title: 'Travel Journal Web App',
   description:
     'Web app to share travel stories built with Node.js and Express.',
-  technologies: ['Node.js', 'Express', 'javascript'],
+  technologies: ['NodeJS', 'Express', 'JavaScript'],
+  repo: 'https://github.com/maxiblanco/travel-journal',
 };
 
 export const chatbotProjectData = {
+  alias: 'firechat',
   image: {
     gif: 'https://media.giphy.com/media/Kfl1NveFi8QAG9MZHF/giphy.gif',
     src: '../assets/images/firechat_frame.png',
@@ -31,10 +36,12 @@ export const chatbotProjectData = {
   title: 'Firebot',
   description:
     'A chatbot connected to an Api that returns random stories and dialog.',
-  technologies: ['react', 'javascript', 'node'],
+  technologies: ['NodeJS', 'Express', 'JavaScript'],
+  repo: 'https://github.com/maxiblanco/firechat-app',
 };
 
 export const travelMapProjectData = {
+  alias: 'map',
   image: {
     gif: 'https://media.giphy.com/media/hVIUhNFlzZjobrwkZy/giphy.gif',
     src: '../assets/images/map-frame.png',
@@ -44,4 +51,5 @@ export const travelMapProjectData = {
   description:
     'A Map connected to an api to store locations with comments on a map.',
   technologies: ['react', 'node', 'mapbox'],
+  repo: 'https://github.com/maxiblanco/travel-log',
 };
