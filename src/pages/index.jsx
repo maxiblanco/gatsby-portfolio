@@ -31,7 +31,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 200, height: 300) {
+        fixed(width: 240, height: 400) {
           src
           srcSet
           width
@@ -43,7 +43,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 200, height: 300) {
+        fixed(width: 240, height: 400) {
           src
           srcSet
           width
@@ -90,7 +90,7 @@ const Index = ({ data }) => {
               <div className="container over-lottie">
                 <div className="columns">
                   <div
-                    className="column is-one-quarter is-hidden-touch"
+                    className="column is-one-third is-hidden-touch"
                     onMouseEnter={() => setImageHovered(true)}
                     onMouseLeave={() => setImageHovered(false)}
                   >
