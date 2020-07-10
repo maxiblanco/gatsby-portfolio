@@ -10,6 +10,7 @@ import {
   faToggleOn,
   faToggleOff,
   faEye,
+  faCode,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -20,5 +21,6 @@ library.add(
   faNode,
   faJs,
   faReact,
-  faEye
+  faEye,
+  faCode
 );
