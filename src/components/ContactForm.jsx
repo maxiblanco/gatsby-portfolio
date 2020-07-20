@@ -27,7 +27,10 @@ const ContactForm = ({ data }) => {
   };
   const handleOnChange = (event) => {
     event.persist();
-    setInputs((prev) => ({ ...prev, [event.target.id]: event.target.value }));
+    setInputs((prev) => ({
+      ...prev,
+      [event.target.id]: event.target.value,
+    }));
     setStatus({
       submitted: false,
       submitting: false,
@@ -86,7 +89,10 @@ const ContactForm = ({ data }) => {
       </div>
       <div className="field">
         <div className="control">
-          <button className="button" type="submit" disabled={status.submitting}>
+          <button
+            className="button"
+            type="submit"
+            disabled={status.submitting}>
             {
               // eslint-disable-next-line no-nested-ternary
               !status.submitting

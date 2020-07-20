@@ -14,15 +14,13 @@ const Navbar = () => {
     <nav
       className="navbar is-fixed-top is-transparent is-spaced"
       role="navigation"
-      aria-label="main navigation"
-    >
+      aria-label="main navigation">
       <div className="navbar-brand">
         <div
           role="button"
           className="navbar-burger"
           aria-label="menu"
-          aria-expanded="false"
-        >
+          aria-expanded="false">
           <span aria-hidden="true" />
           <span aria-hidden="true" />
           <span aria-hidden="true" />
@@ -34,12 +32,11 @@ const Navbar = () => {
             <button
               type="button"
               className="button is-white is-medium has-text-weight-semibold"
-              onClick={() => scrollTo('#projects')}
-            >
+              onClick={() => scrollTo('#projects')}>
               <p>Projects</p>
             </button>
           </li>
-          <li className="navbar-item">
+          {/*           <li className="navbar-item">
             <Link to="blog">
               <button
                 type="button"
@@ -49,33 +46,30 @@ const Navbar = () => {
                 <p>Writings</p>
               </button>
             </Link>
-          </li>
+          </li> */}
           <li className="navbar-item">
             <button
               type="button"
               className="button is-white is-medium has-text-weight-semibold"
-              onClick={() => scrollTo('#contact')}
-            >
+              onClick={() => scrollTo('#contact')}>
               <p>Contact</p>
             </button>
           </li>
           <li className="navbar-item">
             <button
               type="button"
-              className="button is-white is-medium has-text-weight-semibold"
-            >
+              className="button is-white is-medium has-text-weight-semibold">
               <a
                 download
                 href="/CV_MaximilianoBlanco_ENG.pdf"
-                className="has-text-black"
-              >
+                className="has-text-black">
                 <p>CV</p>
               </a>
             </button>
           </li>
-          <li className="navbar-item">
+          {/*           <li className="navbar-item">
             <DarkModeToggle />
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

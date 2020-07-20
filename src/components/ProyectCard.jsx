@@ -49,7 +49,9 @@ const ProyectCard = ({
           }
         }
       }
-      journal: file(relativePath: { eq: "travel-journal-frame.png" }) {
+      journal: file(
+        relativePath: { eq: "travel-journal-frame.png" }
+      ) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
@@ -74,19 +76,26 @@ const ProyectCard = ({
         <div className="column">
           <div className="card-image nocolor">
             <figure className="image ">
-              <Img fixed={data[alias].childImageSharp.fixed} alt={image.alt} />
+              <Img
+                fixed={data[alias].childImageSharp.fixed}
+                alt={image.alt}
+              />
             </figure>
             <div className="is-overlay visible-on-hover">
-              <img src={image.gif} alt={image.alt} className="is-primary" />
+              <img
+                src={image.gif}
+                alt={image.alt}
+                className="is-primary"
+              />
             </div>
           </div>
         </div>
         <div className="column ">
           <div className="card-content">
             <p>{description}</p>
-            <span className="icon is-large">
+            {/*             <span className="icon is-large">
               <img src={ReduxSaga} alt="redux logo" />
-            </span>
+            </span> */}
 
             <span className="icon is-large">
               <FontAwesomeIcon
@@ -111,30 +120,37 @@ const ProyectCard = ({
       </div>
 
       <footer className="card-footer">
-        <a
-          type="button"
-          href={repo}
-          rel="noreferrer"
-          role="button"
-          target="_blank"
-          className="button card-footer-item"
-        >
-          <span className="icon">
-            <FontAwesomeIcon className="mx-3" icon={['fa', 'code']} />
-          </span>
-          <span>Code</span>
-        </a>
-        <a
-          type="button"
-          target="_blank"
-          href={repo}
-          rel="noreferrer"
-          role="button"
-          className="button card-footer-item"
-          disabled
-        >
-          Demo
-        </a>
+        <div className="level card-footer-item">
+          <div>
+            <a
+              type="button"
+              href={repo}
+              rel="noreferrer"
+              role="button"
+              target="_blank"
+              className="button  my-2 mx-4 is-primary">
+              <span className="icon">
+                <FontAwesomeIcon
+                  className="mx-3"
+                  icon={['fa', 'code']}
+                />
+              </span>
+              <span>Code</span>
+            </a>
+          </div>
+          <div>
+            <a
+              type="button"
+              target="_blank"
+              href={repo}
+              rel="noreferrer"
+              role="button"
+              className="button card-footer-item my-2 mx-4 is-dark"
+              disabled>
+              Demo
+            </a>
+          </div>
+        </div>
       </footer>
     </article>
   );
