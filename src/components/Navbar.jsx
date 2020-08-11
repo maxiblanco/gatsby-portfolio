@@ -14,14 +14,12 @@ const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   return (
     <nav
-      className="navbar is-fixed-top is-transparent is-spaced over-lottie over-all"
+      className="navbar is-fixed-top is-transparent is-spaced over-lottie"
       role="navigation"
       aria-label="main navigation">
       <div
         className={
-          menuOpened
-            ? 'navbar-brand dropdown is-active over-all'
-            : 'navbar-brand dropdown'
+          menuOpened ? 'dropdown is-active over-all' : 'dropdown'
         }>
         <div className="dropdown-trigger is-pulled-right">
           <div
@@ -78,18 +76,18 @@ const Navbar = () => {
             </div>
           </Fade>
         ) : null}
-
-        <div className="navbar-menu ">
-          <ul className="navbar-end">
-            <li className="navbar-item">
-              <button
-                type="button"
-                className="button is-white is-medium has-text-weight-semibold"
-                onClick={() => scrollTo('#projects')}>
-                <p>Projects</p>
-              </button>
-            </li>
-            {/*           <li className="navbar-item">
+      </div>
+      <div className="navbar-menu">
+        <ul className="navbar-end">
+          <li className="navbar-item">
+            <button
+              type="button"
+              className="button is-white is-medium has-text-weight-semibold"
+              onClick={() => scrollTo('#projects')}>
+              <p>Projects</p>
+            </button>
+          </li>
+          {/*           <li className="navbar-item">
             <Link to="blog">
               <button
                 type="button"
@@ -100,31 +98,30 @@ const Navbar = () => {
               </button>
             </Link>
           </li> */}
-            <li className="navbar-item">
-              <button
-                type="button"
-                className="button is-white is-medium has-text-weight-semibold"
-                onClick={() => scrollTo('#contact')}>
-                <p>Contact</p>
-              </button>
-            </li>
-            <li className="navbar-item">
-              <button
-                type="button"
-                className="button is-white is-medium has-text-weight-semibold">
-                <a
-                  download
-                  href="/CV_MaximilianoBlanco_ENG.pdf"
-                  className="has-text-black">
-                  <p>CV</p>
-                </a>
-              </button>
-            </li>
-            {/*           <li className="navbar-item">
+          <li className="navbar-item">
+            <button
+              type="button"
+              className="button is-white is-medium has-text-weight-semibold"
+              onClick={() => scrollTo('#contact')}>
+              <p>Contact</p>
+            </button>
+          </li>
+          <li className="navbar-item">
+            <button
+              type="button"
+              className="button is-white is-medium has-text-weight-semibold">
+              <a
+                download
+                href="/CV_MaximilianoBlanco_ENG.pdf"
+                className="has-text-black">
+                <p>CV</p>
+              </a>
+            </button>
+          </li>
+          {/*           <li className="navbar-item">
             <DarkModeToggle />
           </li> */}
-          </ul>
-        </div>
+        </ul>
       </div>
     </nav>
   );

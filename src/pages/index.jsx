@@ -154,22 +154,26 @@ const Index = ({ data }) => {
           <div className="hero is-fullheight ">
             <div className="hero-body ">
               <div className="container">
-                <div className="columns is-vcentered">
-                  <div className="column">
-                    <ProyectCard {...healthyProjectData} />
+                <Fade bottom duration={1200}>
+                  <div className="columns is-vcentered">
+                    <div className="column">
+                      <ProyectCard {...healthyProjectData} />
+                    </div>
+                    <div className="column">
+                      <ProyectCard {...travelJournalProjectData} />
+                    </div>
                   </div>
-                  <div className="column">
-                    <ProyectCard {...travelJournalProjectData} />
+                </Fade>
+                <Fade bottom duration={1200}>
+                  <div className="columns">
+                    <div className="column">
+                      <ProyectCard {...travelMapProjectData} />
+                    </div>
+                    <div className="column">
+                      <ProyectCard {...chatbotProjectData} />
+                    </div>
                   </div>
-                </div>
-                <div className="columns">
-                  <div className="column">
-                    <ProyectCard {...travelMapProjectData} />
-                  </div>
-                  <div className="column">
-                    <ProyectCard {...chatbotProjectData} />
-                  </div>
-                </div>
+                </Fade>
               </div>
             </div>
           </div>

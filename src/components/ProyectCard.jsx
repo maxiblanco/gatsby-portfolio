@@ -93,9 +93,6 @@ const ProyectCard = ({
         <div className="column ">
           <div className="card-content">
             <p>{description}</p>
-            {/*             <span className="icon is-large">
-              <img src={ReduxSaga} alt="redux logo" />
-            </span> */}
 
             <span className="icon is-large">
               <FontAwesomeIcon
