@@ -11,7 +11,7 @@ const ContactForm = ({ data }) => {
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
-        sumitted: true,
+        submitted: true,
         submitting: false,
         info: { error: false, msg },
       });
@@ -58,9 +58,9 @@ const ContactForm = ({ data }) => {
   return (
     <form onSubmit={handleOnSubmit}>
       <h3 className="title is-3 has-text-centered">Contact me!</h3>
-      <div className="field">
+      <div className="field ">
         <label className="label" htmlFor="email">
-          Email
+          <p className="mb-4 mx-1">Email</p>
           <div className="control">
             <input
               className="input"
@@ -74,9 +74,9 @@ const ContactForm = ({ data }) => {
           </div>
         </label>
       </div>
-      <div className="field">
+      <div className="field ">
         <label className="label" htmlFor="message">
-          Message
+          <p className="mb-4 mx-1">Message</p>
           <textarea
             className="textarea"
             name="message"

@@ -25,35 +25,6 @@ import {
   chatbotProjectData,
 } from '../data/ProjectData';
 
-export const query = graphql`
-  query {
-    happy: file(relativePath: { eq: "maxi-peep-happy.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 240, height: 400) {
-          src
-          srcSet
-          width
-          height
-        }
-      }
-    }
-    masked: file(relativePath: { eq: "maxi-peep-masked.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 240, height: 400) {
-          src
-          srcSet
-          width
-          height
-        }
-      }
-    }
-  }
-`;
-
 const Index = ({ data }) => {
   const animationContainer = createRef();
   const [isImageHovered, setImageHovered] = useState(false);
@@ -75,7 +46,10 @@ const Index = ({ data }) => {
         <Navbar />
         <div className="absolute-container">
           <div className="sticky-container">
-            <div className="animation-container" ref={animationContainer} />
+            <div
+              className="animation-container"
+              ref={animationContainer}
+            />
           </div>
         </div>
 
@@ -86,20 +60,33 @@ const Index = ({ data }) => {
         <section id="introduction" className="section">
           <div className="hero is-fullheight-with-navbar ">
             <div className="hero-body">
-              <div className="container over-lottie">
-                <div className="columns">
+              <div
+                className="container over-lottie"
+                style={{ 'z-index': 899 }}>
+                <div className="columns" style={{ 'z-index': 899 }}>
                   <div
                     className="column is-one-third is-hidden-touch"
                     onMouseEnter={() => setImageHovered(true)}
-                    onMouseLeave={() => setImageHovered(false)}
-                  >
+                    onMouseLeave={() => setImageHovered(false)}>
                     {isImageHovered ? (
-                      <Img fixed={data.masked.childImageSharp.fixed} />
+                      <Fade duration={1200}>
+                        <img
+                          className="peep-maxi"
+                          src="/images/maxi-peep-masked.png"
+                          alt="Max with a mask"
+                        />
+                      </Fade>
                     ) : (
-                      <Img fixed={data.happy.childImageSharp.fixed} />
+                      <Fade duration={1200}>
+                        <img
+                          className="peep-maxi"
+                          src="/images/maxi-peep-happy.png"
+                          alt="Math with a happy face"
+                        />
+                      </Fade>
                     )}
                   </div>
-                  <div className="column ">
+                  <div className="column " style={{ 'z-index': 899 }}>
                     <Fade>
                       <div className="my-4">
                         <h1 className="title is-1 has-text-weight-bold">
@@ -108,37 +95,57 @@ const Index = ({ data }) => {
                         </h1>
                       </div>
                     </Fade>
-                    <Fade top cascade>
-                      <div className="container">
+                    <Fade top cascade duration={3000}>
+                      <div className="container my-6">
                         <p className="subtitle is-4">
                           Every interaction tells a story.
                         </p>
+
                         <p className="subtitle is-4">
-                          I’m interested in how technology influences the
-                          stories we tell each other.
+                          I'm interested in how technology influences
+                          the stories we tell each other.
                         </p>
+
                         <p className="subtitle is-4">
-                          I strive to develop software that makes each story
-                          more engaging.
+                          I strive to develop software that makes each
+                          story more engaging.
                         </p>
+
+                        <div className="subtitle is-4 is-pulled-right mt-4">
+                          <a href="https://www.linkedin.com/in/maxiblanco/">
+                            <FontAwesomeIcon
+                              className="mx-3 my-3 is-size-1"
+                              icon={['fab', 'linkedin']}
+                            />
+                          </a>
+                          <a href="https://github.com/maxiblanco">
+                            <FontAwesomeIcon
+                              className="mx-3 my-3 is-size-1"
+                              icon={['fab', 'github']}
+                            />
+                          </a>
+                        </div>
                       </div>
                     </Fade>
                   </div>
                 </div>
-                <Flip top>
-                  <button
-                    type="button"
-                    className="button mt-6 is-rounded more-button is-large is-pulled-right has-text-light has-background-grey-dark is-hidden-touch"
-                    onClick={() => scrollTo('#projects')}
-                  >
-                    <span>Projects</span>
+                <div className="level">
+                  <div className="level-item has-text-centered">
+                    <Flip duration={800} delay={2000} top>
+                      <button
+                        type="button"
+                        className="button mt-6 is-rounded more-button is-large is-pulled-right has-text-light has-background-grey-dark"
+                        onClick={() => scrollTo('#projects')}>
+                        <span>Projects</span>
 
-                    <FontAwesomeIcon
-                      className="ml-3 is-size-4"
-                      icon={['fa', 'eye']}
-                    />
-                  </button>
-                </Flip>
+                        <FontAwesomeIcon
+                          className="ml-3 is-size-4"
+                          icon={['fa', 'eye']}
+                        />
+                      </button>
+                    </Flip>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -194,7 +201,8 @@ const Index = ({ data }) => {
             </a>
           </div>
           <p className="has-text-centered">
-            Work in progress by <strong>Maximiliano Blanco</strong> &#169; 2020
+            Work in progress by <strong>Maximiliano Blanco</strong>
+            &#169; 2020
           </p>
         </div>
       </footer>

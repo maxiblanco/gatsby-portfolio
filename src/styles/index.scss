@@ -2,8 +2,7 @@
 @import './_fonts.scss';
 
 // Bulma Variables
-$family-sans-serif: 'Montserrat',
-sans-serif;
+$family-sans-serif: 'Montserrat', sans-serif;
 
 body.light-mode {
   /* light theme */
@@ -65,15 +64,15 @@ $navbar-background-color: none;
   filter: blur(10px);
 }
 
-
 .under-lottie {
   position: relative;
   z-index: -999;
 }
 
-.over-lottie {
-  position: relative;
-  z-index: 999;
+.over-all {
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 
 .sticky-container {
@@ -111,7 +110,6 @@ main {
 .card-image figure img {
   max-width: 200px;
   padding: 1px;
-  border: 3px solid #ccc;
   border-radius: 5px;
 }
 
@@ -139,7 +137,6 @@ article.card:hover {
   opacity: 0;
   max-width: 200px;
   margin: 0 auto;
-  border: 3px solid #ccc;
   border-radius: 5px;
 
   &:hover {
@@ -155,4 +152,17 @@ article.card:hover {
 
 nav .navbar {
   z-index: 999;
+}
+
+.navbar-burger span {
+  border: 1px solid;
+}
+
+.peep-maxi {
+  max-width: 80%;
+}
+
+.navbar-burger {
+  margin-left: 0px !important;
+  margin-right: auto !important;
 }
