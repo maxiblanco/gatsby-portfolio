@@ -72,7 +72,7 @@ const Index = ({ data }) => {
                       <Fade duration={1200}>
                         <img
                           className="peep-maxi"
-                          src="/images/maxi-peep-masked.png"
+                          src="https://i.imgur.com/8lMzsq3.png"
                           alt="Max with a mask"
                         />
                       </Fade>
@@ -80,8 +80,8 @@ const Index = ({ data }) => {
                       <Fade duration={1200}>
                         <img
                           className="peep-maxi"
-                          src="/images/maxi-peep-happy.png"
-                          alt="Math with a happy face"
+                          src="https://i.imgur.com/69r4nw2.png"
+                          alt="Max with a happy face"
                         />
                       </Fade>
                     )}
