@@ -124,7 +124,7 @@ const Navbar = () => {
             >
               <a
                 download
-                href="/CV_MaximilianoBlanco_ENG.pdf"
+                href="https://github.com/maxiblanco/cv/raw/master/CV_Maximiliano_Blanco_ENG.pdf"
                 className="has-text-black"
               >
                 <p>CV</p>
