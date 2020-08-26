@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
 const ProyectCards = () => {
   return (
     <div className="columns">
@@ -11,7 +8,7 @@ const ProyectCards = () => {
         <div className="card hover__scale">
           <div className="card-image">
             <figure className="image is-16by9">
-              <img src="https://i.imgur.com/Qjet3lE.gif" alt="Placeholder image" />
+              <img src="https://i.imgur.com/Qjet3lE.gif" alt="Placeholder" />
             </figure>
           </div>
           <div className="card-content">
@@ -49,7 +46,7 @@ const ProyectCards = () => {
               Website to post possible movie locations and rental information.
               <br />
             </div>
-            <div className="level ">
+            <div className="level is-mobile">
               <div className="level-item">
                 <div>
                   <a type="button" href="https://github.com/maxiblanco/film-here-next" rel="noreferrer" role="button" target="_blank" className="button">
@@ -117,7 +114,7 @@ const ProyectCards = () => {
               Movie search database that presents dynamic content from TheMovieDB API.
               <br />
             </div>
-            <div className="level ">
+            <div className="level is-mobile">
               <div className="level-item">
                 <div>
                   <a type="button" href="https://github.com/maxiblanco/movieclub-reborn" rel="noreferrer" role="button" target="_blank" className="button">
@@ -184,7 +181,7 @@ const ProyectCards = () => {
               Server side rendered site to share travel stories built with Node.js and Express.
               <br />
             </div>
-            <div className="level ">
+            <div className="level is-mobile">
               <div className="level-item">
                 <div>
                   <a type="button" href="https://github.com/maxiblanco/travel-journal" rel="noreferrer" role="button" target="_blank" className="button">

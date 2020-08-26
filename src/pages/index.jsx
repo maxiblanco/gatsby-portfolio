@@ -17,7 +17,7 @@ import '../utils/fontawesome';
 import animatedBlob from '../assets/animations/faster-blob-animation.json';
 
 
-const Index = ({ data }) => {
+const Index = ({ data}) => {
   const animationContainer = createRef();
   const [isImageHovered, setImageHovered] = useState(false);
 
@@ -84,7 +84,7 @@ const Index = ({ data }) => {
                   <div className="column " style={{ 'z-index': 899 }}>
                     <Fade>
                       <div className="my-4">
-                        <h1 className="title is-1 has-text-weight-bold">
+                        <h1 className="title is-1 is-size-2-touch has-text-weight-bold">
                           Hi! I'm Max.
                           <br />
                           A Web Developer.
@@ -93,30 +93,30 @@ const Index = ({ data }) => {
                     </Fade>
                     <Fade top cascade duration={3000}>
                       <div className="container my-6">
-                        <p className="subtitle is-4">
+                        <p className="subtitle is-4 is-size-5-touch">
                           Every interaction tells a story.
                         </p>
 
-                        <p className="subtitle is-4">
+                        <p className="subtitle is-4 is-size-5-touch">
                           I'm interested in how technology influences
                           the stories we tell each other.
                         </p>
 
-                        <p className="subtitle is-4">
+                        <p className="subtitle is-4 is-size-5-touch">
                           I strive to develop software that makes each
                           story more engaging.
                         </p>
 
-                        <div className="subtitle is-4 is-pulled-right mt-4">
+                        <div className="subtitle is-4 is-size-3-touch is-pulled-right mt-4">
                           <a href="https://www.linkedin.com/in/maxiblanco/">
                             <FontAwesomeIcon
-                              className="mx-3 my-3 is-size-1"
+                              className="mx-3 my-3 is-size-1 is-size-2-touch"
                               icon={['fab', 'linkedin']}
                             />
                           </a>
                           <a href="https://github.com/maxiblanco">
                             <FontAwesomeIcon
-                              className="mx-3 my-3 is-size-1"
+                              className="mx-3 my-3 is-size-1 is-size-2-touch"
                               icon={['fab', 'github']}
                             />
                           </a>
@@ -187,7 +187,7 @@ const Index = ({ data }) => {
             </a>
           </div>
           <p className="has-text-centered">
-            Work in progress by 
+            Made by 
             {' '}
             <strong>Maximiliano Blanco</strong>
             &#169; 2020
