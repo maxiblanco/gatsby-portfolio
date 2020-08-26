@@ -1,156 +1,216 @@
-import React, { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Img from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
-import ReduxSaga from '../assets/icons/redux-saga.svg';
+import React from 'react';
 
-const ProyectCard = ({
-  alias,
-  image = {},
-  title,
-  description,
-  technologies = {},
-  repo,
-}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      firechat: file(relativePath: { eq: "firechat_frame.png" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query. # Makes it trivial to update as your page's design changes.
-          fixed(width: 200, height: 350) {
-            src
-            srcSet
-            width
-            height
-          }
-        }
-      }
-      healthy: file(relativePath: { eq: "healthy-dev-frame.png" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 200, height: 350) {
-            src
-            srcSet
-            width
-            height
-          }
-        }
-      }
-      map: file(relativePath: { eq: "map-frame.png" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 200, height: 350) {
-            src
-            srcSet
-            width
-            height
-          }
-        }
-      }
-      journal: file(
-        relativePath: { eq: "travel-journal-frame.png" }
-      ) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 200, height: 350) {
-            src
-            srcSet
-            width
-            height
-          }
-        }
-      }
-    }
-  `);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+const ProyectCards = () => {
   return (
-    <article className="card">
-      <div className="card-header">
-        <div className="card-header-title is-centered">
-          <p>{title}</p>
-        </div>
-      </div>
-      <div className="columns">
-        <div className="column">
-          <div className="card-image nocolor">
-            <figure className="image ">
-              <Img
-                fixed={data[alias].childImageSharp.fixed}
-                alt={image.alt}
-              />
+    <div className="columns">
+      <div className="column">
+
+        <div className="card hover__scale">
+          <div className="card-image">
+            <figure className="image is-16by9">
+              <img src="https://i.imgur.com/Qjet3lE.gif" alt="Placeholder image" />
             </figure>
-            <div className="is-overlay visible-on-hover">
-              <img
-                src={image.gif}
-                alt={image.alt}
-                className="is-primary"
-              />
+          </div>
+          <div className="card-content">
+            <div className="media">
+              {/*               <div className="media-left">
+                <figure className="image is-48x48">
+                  <img src="https://placeholder.pics/svg/90" alt="Placeholder image" />
+                </figure>
+              </div> */}
+              <div className="media-content">
+                <p className="title is-3">Film Here Next</p>
+              </div>
+            </div>
+            <div className="content ">
+              <div className="level">
+                <div className="level-item">
+                  <div className=" tags has-addons">
+                    <span className="tag">Next</span>
+                    <span className="tag is-primary">JS</span>
+                  </div>
+                </div>
+                <div className="level-item">
+                  <div className="tags has-addons">
+                    <span className="tag">Tailwinds</span>
+                    <span className="tag is-primary">CSS</span>
+                  </div>
+                </div>
+                <div className="level-item">
+                  <div className="tags has-addons">
+                    <span className="tag">GoogleMaps</span>
+                    <span className="tag is-primary">API</span>
+                  </div>
+                </div>
+              </div>
+              Website to post possible movie locations and rental information.
+              <br />
+            </div>
+            <div className="level ">
+              <div className="level-item">
+                <div>
+                  <a type="button" href="https://github.com/maxiblanco/film-here-next" rel="noreferrer" role="button" target="_blank" className="button">
+                    <span className="icon has-text-info">
+                      <i className="fas fa-code-branch" />
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </div>
+              </div>
+              <div className="level-item">
+                <div>
+                  <a type="button" href="https://film-here-next.vercel.app/" rel="noreferrer" role="button" target="_blank" className="button">
+                    <span className="icon has-text-info">
+                      <i className="far fa-eye" />
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="column ">
+        
+      </div>
+      <div className="column">
+        <div className="card hover__scale">
+          <div className="card-image">
+            <figure className="image is-16by9">
+              <img src="https://i.imgur.com/y24jSD0.gif" alt="Placeholder" />
+            </figure>
+          </div>
           <div className="card-content">
-            <p>{description}</p>
-
-            <span className="icon is-large">
-              <FontAwesomeIcon
-                icon={['fab', 'js']}
-                className="mx-3 my-3 is-size-3"
-              />
-            </span>
-            <span className="icon is-large">
-              <FontAwesomeIcon
-                icon={['fab', 'node']}
-                className="mx-3 my-3 is-size-3"
-              />
-            </span>
-            <span className="icon is-large">
-              <FontAwesomeIcon
-                icon={['fab', 'react']}
-                className="mx-3 my-3 is-size-3"
-              />
-            </span>
+            <div className="media">
+              {/* <div className="media-left">
+                <figure className="image is-48x48">
+                  <img src="https://placeholder.pics/svg/90" alt="Placeholder image" />
+                </figure>
+              </div> */}
+              <div className="media-content">
+                <p className="title is-3">Movieclub</p>
+              </div>
+            </div>
+            <div className="content ">
+              <div className="level">
+                <div className="level-item">
+                  <div className=" tags has-addons">
+                    <span className="tag">Tailwinds</span>
+                    <span className="tag is-primary">CSS</span>
+                  </div>
+                </div>
+                <div className="level-item">
+                  <div className="tags has-addons">
+                    <span className="tag">Redux</span>
+                    <span className="tag is-primary">JS</span>
+                  </div>
+                </div>
+                <div className="level-item">
+                  <div className="tags has-addons">
+                    <span className="tag">React</span>
+                    <span className="tag is-primary">JS</span>
+                  </div>
+                </div>
+              </div>
+              Movie search database that presents dynamic content from TheMovieDB API.
+              <br />
+            </div>
+            <div className="level ">
+              <div className="level-item">
+                <div>
+                  <a type="button" href="https://github.com/maxiblanco/movieclub-reborn" rel="noreferrer" role="button" target="_blank" className="button">
+                    <span className="icon has-text-info">
+                      <i className="fas fa-code-branch" />
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </div>
+              </div>
+              <div className="level-item">
+                <div>
+                  <a type="button" href="https://movieclub-reborn.vercel.app/" rel="noreferrer" role="button" target="_blank" className="button">
+                    <span className="icon has-text-info">
+                      <i className="far fa-eye" />
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <footer className="card-footer">
-        <div className="level card-footer-item">
-          <div>
-            <a
-              type="button"
-              href={repo}
-              rel="noreferrer"
-              role="button"
-              target="_blank"
-              className="button  my-2 mx-4 is-primary">
-              <span className="icon">
-                <FontAwesomeIcon
-                  className="mx-3"
-                  icon={['fa', 'code']}
-                />
-              </span>
-              <span>Code</span>
-            </a>
+      <div className="column">
+        <div className="card hover__scale">
+          <div className="card-image">
+            <figure className="image is-16by9">
+              <img src="https://i.imgur.com/7ISal9W.gif" alt="Placeholder image" />
+            </figure>
           </div>
-          <div>
-            <a
-              type="button"
-              target="_blank"
-              href={repo}
-              rel="noreferrer"
-              role="button"
-              className="button card-footer-item my-2 mx-4 is-dark"
-              disabled>
-              Demo
-            </a>
+          <div className="card-content">
+            <div className="media">
+              {/* <div className="media-left">
+                <figure className="image is-48x48">
+                  <img src="https://placeholder.pics/svg/90" alt="Placeholder image" />
+                </figure>
+              </div> */}
+              <div className="media-content">
+                <p className="title is-3">Travel Journal</p>
+              </div>
+            </div>
+            <div className="content ">
+              <div className="level">
+                <div className="level-item">
+                  <div className=" tags has-addons">
+                    <span className="tag">Materialize</span>
+                    <span className="tag is-primary">CSS</span>
+                  </div>
+                </div>
+                <div className="level-item">
+                  <div className="tags has-addons">
+                    <span className="tag">Express</span>
+                    <span className="tag is-primary">JS</span>
+                  </div>
+                </div>
+                <div className="level-item">
+                  <div className="tags has-addons">
+                    <span className="tag">Handlebars</span>
+                    <span className="tag is-primary">JS</span>
+                  </div>
+                </div>
+              </div>
+              Server side rendered site to share travel stories built with Node.js and Express.
+              <br />
+            </div>
+            <div className="level ">
+              <div className="level-item">
+                <div>
+                  <a type="button" href="https://github.com/maxiblanco/travel-journal" rel="noreferrer" role="button" target="_blank" className="button">
+                    <span className="icon has-text-info">
+                      <i className="fas fa-code-branch" />
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </div>
+              </div>
+              <div className="level-item">
+                <div>
+                  <a disabled type="button" href="#" rel="noreferrer" role="button" target="_blank" className="button">
+                    <span className="icon has-text-info">
+                      <i className="far fa-eye" />
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </footer>
-    </article>
+      </div>
+    </div>
   );
 };
 
-export default ProyectCard;
+export default ProyectCards;

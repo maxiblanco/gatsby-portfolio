@@ -2,8 +2,6 @@ import React, { useState, useEffect, createRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Fade from 'react-reveal/Fade';
 import Flip from 'react-reveal/Flip';
-import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,19 +9,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import lottie from 'lottie-web';
 import Navbar from '../components/Navbar';
 import ContactForm from '../components/ContactForm';
-import ProyectCard from '../components/ProyectCard';
+import ProyectCards from '../components/ProyectCard';
 // Styles
 import '../styles/index.scss';
 // assets
 import '../utils/fontawesome';
 import animatedBlob from '../assets/animations/faster-blob-animation.json';
-// data
-import {
-  healthyProjectData,
-  travelJournalProjectData,
-  travelMapProjectData,
-  chatbotProjectData,
-} from '../data/ProjectData';
+
 
 const Index = ({ data }) => {
   const animationContainer = createRef();
@@ -55,6 +47,7 @@ const Index = ({ data }) => {
 
         <Helmet>
           <title>Maximiliano Blanco</title>
+          <script src="https://kit.fontawesome.com/77285598c3.js" crossOrigin="anonymous" />
         </Helmet>
 
         <section id="introduction" className="section">
@@ -62,12 +55,14 @@ const Index = ({ data }) => {
             <div className="hero-body">
               <div
                 className="container over-lottie"
-                style={{ 'z-index': 899 }}>
+                style={{ 'z-index': 899 }}
+              >
                 <div className="columns" style={{ 'z-index': 899 }}>
                   <div
                     className="column is-one-third is-hidden-touch"
                     onMouseEnter={() => setImageHovered(true)}
-                    onMouseLeave={() => setImageHovered(false)}>
+                    onMouseLeave={() => setImageHovered(false)}
+                  >
                     {isImageHovered ? (
                       <Fade duration={1200}>
                         <img
@@ -91,7 +86,8 @@ const Index = ({ data }) => {
                       <div className="my-4">
                         <h1 className="title is-1 has-text-weight-bold">
                           Hi! I'm Max.
-                          <br />A Web Developer.
+                          <br />
+                          A Web Developer.
                         </h1>
                       </div>
                     </Fade>
@@ -135,7 +131,8 @@ const Index = ({ data }) => {
                       <button
                         type="button"
                         className="button mt-6 is-rounded more-button is-large is-pulled-right has-text-light has-background-grey-dark"
-                        onClick={() => scrollTo('#projects')}>
+                        onClick={() => scrollTo('#projects')}
+                      >
                         <span>Projects</span>
 
                         <FontAwesomeIcon
@@ -152,29 +149,14 @@ const Index = ({ data }) => {
         </section>
         <section id="projects" className="section ">
           <div className="hero is-fullheight ">
-            <div className="hero-body ">
-              <div className="container">
-                <Fade bottom duration={1200}>
-                  <div className="columns is-vcentered">
-                    <div className="column">
-                      <ProyectCard {...healthyProjectData} />
-                    </div>
-                    <div className="column">
-                      <ProyectCard {...travelJournalProjectData} />
-                    </div>
+            <div className="hero-body">
+              <Fade bottom duration={1200}>
+                <div className="columns">
+                  <div className="column">
+                    <ProyectCards  />
                   </div>
-                </Fade>
-                <Fade bottom duration={1200}>
-                  <div className="columns">
-                    <div className="column">
-                      <ProyectCard {...travelMapProjectData} />
-                    </div>
-                    <div className="column">
-                      <ProyectCard {...chatbotProjectData} />
-                    </div>
-                  </div>
-                </Fade>
-              </div>
+                </div>
+              </Fade>
             </div>
           </div>
         </section>
@@ -205,7 +187,9 @@ const Index = ({ data }) => {
             </a>
           </div>
           <p className="has-text-centered">
-            Work in progress by <strong>Maximiliano Blanco</strong>
+            Work in progress by 
+            {' '}
+            <strong>Maximiliano Blanco</strong>
             &#169; 2020
           </p>
         </div>

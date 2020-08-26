@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { Link } from 'gatsby';
+import useHideAfterScroll from '../hooks/useHideAfterScroll'
 // Components
 import DarkModeToggle from './DarkModeToggle';
 // assets
@@ -11,16 +11,19 @@ import espCV from '../assets/pdf/CV_MaximilianoBlanco_ESP.pdf';
 */
 
 const Navbar = () => {
+  const [show] = useHideAfterScroll()
   const [menuOpened, setMenuOpened] = useState(false);
   return (
     <nav
-      className="navbar is-fixed-top is-transparent is-spaced over-lottie"
+      className={`navbar is-fixed-top over-lottie ${show ? "is-white has-shadow" : "is-transparent"}`}
       role="navigation"
-      aria-label="main navigation">
+      aria-label="main navigation"
+    >
       <div
         className={
           menuOpened ? 'dropdown is-active over-all' : 'dropdown'
-        }>
+        }
+      >
         <div className="dropdown-trigger is-pulled-right">
           <div
             role="button"
@@ -29,7 +32,8 @@ const Navbar = () => {
             onKeyDown={() => setMenuOpened(!menuOpened)}
             className="navbar-burger"
             aria-label="menu"
-            aria-expanded="false">
+            aria-expanded="false"
+          >
             <span aria-hidden="true" />
             <span aria-hidden="true" />
             <span aria-hidden="true" />
@@ -40,13 +44,15 @@ const Navbar = () => {
             <div
               className="dropdown-menu"
               id="dropdown-menu2"
-              role="menu">
+              role="menu"
+            >
               <div className="dropdown-content has-text-centered">
                 <div className="dropdown-item">
                   <button
                     type="button"
                     className="button is-white is-medium has-text-weight-semibold"
-                    onClick={() => scrollTo('#projects')}>
+                    onClick={() => scrollTo('#projects')}
+                  >
                     <p>Projects</p>
                   </button>
                 </div>
@@ -55,7 +61,8 @@ const Navbar = () => {
                   <button
                     type="button"
                     className="button is-white is-medium has-text-weight-semibold"
-                    onClick={() => scrollTo('#contact')}>
+                    onClick={() => scrollTo('#contact')}
+                  >
                     <p>Contact</p>
                   </button>
                 </div>
@@ -63,11 +70,13 @@ const Navbar = () => {
                 <div className="dropdown-item">
                   <button
                     type="button"
-                    className="button is-white is-medium has-text-weight-semibold">
+                    className="button is-white is-medium has-text-weight-semibold"
+                  >
                     <a
                       download
                       href="/CV_MaximilianoBlanco_ENG.pdf"
-                      className="has-text-black">
+                      className="has-text-black"
+                    >
                       <p>CV</p>
                     </a>
                   </button>
@@ -83,7 +92,8 @@ const Navbar = () => {
             <button
               type="button"
               className="button is-white is-medium has-text-weight-semibold"
-              onClick={() => scrollTo('#projects')}>
+              onClick={() => scrollTo('#projects')}
+            >
               <p>Projects</p>
             </button>
           </li>
@@ -94,7 +104,7 @@ const Navbar = () => {
                 className="button is-white disabled is-medium has-text-weight-semibold"
                 disabled
               >
-                <p>Writings</p>
+                <p>Blog</p>
               </button>
             </Link>
           </li> */}
@@ -102,18 +112,21 @@ const Navbar = () => {
             <button
               type="button"
               className="button is-white is-medium has-text-weight-semibold"
-              onClick={() => scrollTo('#contact')}>
+              onClick={() => scrollTo('#contact')}
+            >
               <p>Contact</p>
             </button>
           </li>
           <li className="navbar-item">
             <button
               type="button"
-              className="button is-white is-medium has-text-weight-semibold">
+              className="button is-white is-medium has-text-weight-semibold"
+            >
               <a
                 download
                 href="/CV_MaximilianoBlanco_ENG.pdf"
-                className="has-text-black">
+                className="has-text-black"
+              >
                 <p>CV</p>
               </a>
             </button>

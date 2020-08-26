@@ -107,12 +107,6 @@ main {
   flex: 1;
 }
 
-.card-image figure img {
-  max-width: 200px;
-  padding: 1px;
-  border-radius: 5px;
-}
-
 .card-image figure {
   display: flex;
   align-content: center;
@@ -152,6 +146,7 @@ article.card:hover {
 
 nav .navbar {
   z-index: 999;
+  transition: all 1s ease-in-out;
 }
 
 .navbar-burger span {
@@ -165,4 +160,12 @@ nav .navbar {
 .navbar-burger {
   margin-left: 0px !important;
   margin-right: auto !important;
+}
+
+.hover__scale {
+  transition: all 0.25s ease-in;
+}
+
+.hover__scale:hover {
+  transform: scale(1.1)
 }
