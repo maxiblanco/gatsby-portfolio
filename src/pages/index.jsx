@@ -18,7 +18,6 @@ import animatedBlob from '../assets/animations/faster-blob-animation.json';
 
 
 const Index = ({ data }) => {
-  const [isContentReady, setContentReady] = useState(false);
   const [isImageHovered, setImageHovered] = useState(false);
   const animationContainer = createRef();
 
@@ -33,12 +32,9 @@ const Index = ({ data }) => {
     return () => anim.destroy(); // optional clean up for unmounting
   }, []);
 
-  useEffect(() => {
-    setContentReady(true)
-  }, [])
 
   return (
-    <main className={`has-navbar-fixed-top ${!isContentReady ? 'is-hidden' : null}`}>
+    <main className="has-navbar-fixed-top">
       <div id="wrapper" className="container">
         <Navbar />
         <div className="absolute-container">
