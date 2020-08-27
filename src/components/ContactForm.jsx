@@ -56,7 +56,7 @@ const ContactForm = ({ data }) => {
       });
   };
   return (
-    <form onSubmit={handleOnSubmit}>
+    <form onSubmit={handleOnSubmit} className="my-5">
       <h3 className="title is-3 my-4 has-text-centered">Lets talk!</h3>
       <div className="mx-4 my-2">
         <div className="field">
