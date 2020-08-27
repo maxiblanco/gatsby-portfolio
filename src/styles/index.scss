@@ -169,3 +169,10 @@ nav .navbar {
 .hover__scale:hover {
   transform: scale(1.1)
 }
+
+.flex--wrap.level {
+    flex-wrap: wrap;
+    .tags {
+      flex-wrap: nowrap;
+    }
+}

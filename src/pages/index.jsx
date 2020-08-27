@@ -93,22 +93,19 @@ const Index = ({ data }) => {
                       </div>
                     </Fade>
                     <Fade top cascade duration={3000}>
-                      <div className="container my-6">
+                      <div className="container my-7">
                         <p className="subtitle is-4 is-size-5-touch">
                           Every interaction tells a story.
                         </p>
-
                         <p className="subtitle is-4 is-size-5-touch">
                           I'm interested in how technology influences
                           the stories we tell each other.
                         </p>
-
                         <p className="subtitle is-4 is-size-5-touch">
                           I strive to develop software that makes each
                           story more engaging.
                         </p>
-
-                        <div className="subtitle is-4 is-size-3-touch is-pulled-right mt-4">
+                        <div className="subtitle is-4 is-size-5-touch mt-4">
                           <a href="https://www.linkedin.com/in/maxiblanco/">
                             <FontAwesomeIcon
                               className="mx-3 my-3 is-size-1 is-size-2-touch"
@@ -127,17 +124,17 @@ const Index = ({ data }) => {
                   </div>
                 </div>
                 <div className="level">
-                  <div className="level-item has-text-centered">
+                  <div className="level-item has-text-centered ">
                     <Flip duration={800} delay={2000} top>
                       <button
                         type="button"
-                        className="button mt-6 is-rounded more-button is-large is-pulled-right has-text-light has-background-grey-dark"
+                        className="button mt-7 is-size-5-touch is-rounded more-button is-large is-pulled-right has-text-light has-background-grey-dark"
                         onClick={() => scrollTo('#projects')}
                       >
                         <span>Projects</span>
 
                         <FontAwesomeIcon
-                          className="ml-3 is-size-4"
+                          className="ml-3 is-size-4 is-size-5-touch"
                           icon={['fa', 'eye']}
                         />
                       </button>
@@ -152,10 +149,8 @@ const Index = ({ data }) => {
           <div className="hero is-fullheight ">
             <div className="hero-body">
               <Fade bottom duration={1200}>
-                <div className="columns">
-                  <div className="column">
-                    <ProyectCards  />
-                  </div>
+                <div className="container">
+                  <ProyectCards  />
                 </div>
               </Fade>
             </div>
@@ -186,14 +181,22 @@ const Index = ({ data }) => {
                 icon={['fab', 'github']}
               />
             </a>
+
           </div>
-          <p className="has-text-centered">
+
+          <div className="level mt-6 mb-2">
+            <a className="level-item" href="https://bulma.io">
+              <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24" />
+            </a>
+          </div>
+          <p className="has-text-centered my-2">
             Made by 
             {' '}
             <strong>Maximiliano Blanco</strong>
             &#169; 2020
           </p>
         </div>
+        
       </footer>
     </main>
   );

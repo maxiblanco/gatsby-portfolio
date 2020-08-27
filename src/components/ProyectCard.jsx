@@ -19,32 +19,31 @@ const ProyectCards = () => {
                 </figure>
               </div> */}
               <div className="media-content">
-                <p className="title is-3">Film Here Next</p>
+                <p className="title is-size-3-desktop is-size-5-touch is-clipped">Film Here Next</p>
               </div>
             </div>
-            <div className="content ">
-              <div className="level">
-                <div className="level-item">
+            <div className="content">
+              <div className="level flex--wrap">
+                <div className="level-item ">
                   <div className=" tags has-addons">
                     <span className="tag">Next</span>
                     <span className="tag is-primary">JS</span>
                   </div>
                 </div>
                 <div className="level-item">
-                  <div className="tags has-addons">
+                  <div className="tags has-addons ">
                     <span className="tag">Tailwinds</span>
                     <span className="tag is-primary">CSS</span>
                   </div>
                 </div>
                 <div className="level-item">
-                  <div className="tags has-addons">
+                  <div className="tags has-addons ">
                     <span className="tag">GoogleMaps</span>
                     <span className="tag is-primary">API</span>
                   </div>
                 </div>
               </div>
-              Website to post possible movie locations and rental information.
-              <br />
+              <p>Website to share movie locations and rental information.</p>
             </div>
             <div className="level is-mobile">
               <div className="level-item">
@@ -87,11 +86,12 @@ const ProyectCards = () => {
                 </figure>
               </div> */}
               <div className="media-content">
-                <p className="title is-3">Movieclub</p>
+                <p className="title is-size-3-desktop is-size-5-touch is-clipped">Movieclub</p>
               </div>
             </div>
-            <div className="content ">
-              <div className="level">
+ 
+            <div className="content">
+              <div className="level flex--wrap">
                 <div className="level-item">
                   <div className=" tags has-addons">
                     <span className="tag">Tailwinds</span>
@@ -111,8 +111,7 @@ const ProyectCards = () => {
                   </div>
                 </div>
               </div>
-              Movie search database that presents dynamic content from TheMovieDB API.
-              <br />
+              <p className="is-size-6-touch">Movie search database that presents dynamic content from TheMovieDB API.</p>
             </div>
             <div className="level is-mobile">
               <div className="level-item">
@@ -143,7 +142,7 @@ const ProyectCards = () => {
         <div className="card hover__scale">
           <div className="card-image">
             <figure className="image is-16by9">
-              <img src="https://i.imgur.com/7ISal9W.gif" alt="Placeholder image" />
+              <img src="https://i.imgur.com/7ISal9W.gif" alt="Travel journal" />
             </figure>
           </div>
           <div className="card-content">
@@ -154,13 +153,13 @@ const ProyectCards = () => {
                 </figure>
               </div> */}
               <div className="media-content">
-                <p className="title is-3">Travel Journal</p>
+                <p className="title is-size-3-desktop is-size-5-touch is-clipped">Travel Journal</p>
               </div>
             </div>
-            <div className="content ">
-              <div className="level">
+            <div className="content">
+              <div className="level flex--wrap">
                 <div className="level-item">
-                  <div className=" tags has-addons">
+                  <div className="tags has-addons">
                     <span className="tag">Materialize</span>
                     <span className="tag is-primary">CSS</span>
                   </div>
@@ -178,8 +177,7 @@ const ProyectCards = () => {
                   </div>
                 </div>
               </div>
-              Server side rendered site to share travel stories built with Node.js and Express.
-              <br />
+              <p className="is-size-6-touch">Server side rendered site to share travel stories built in Node with ExpressJS.</p>
             </div>
             <div className="level is-mobile">
               <div className="level-item">
