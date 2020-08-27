@@ -52,7 +52,7 @@ const Index = ({ data }) => {
         </Helmet>
 
         <section id="introduction" className="section">
-          <div className="hero is-fullheight-with-navbar ">
+          <div className="hero is-fullheight">
             <div className="hero-body">
               <div
                 className="container over-lottie"
@@ -146,7 +146,7 @@ const Index = ({ data }) => {
           </div>
         </section>
         <section id="projects" className="section ">
-          <div className="hero is-fullheight ">
+          <div className="hero">
             <div className="hero-body">
               <Fade bottom duration={1200}>
                 <div className="container">
@@ -157,7 +157,7 @@ const Index = ({ data }) => {
           </div>
         </section>
         <section id="contact" className="section">
-          <div className="container hero is-fullheight-with-navbar">
+          <div className="container hero">
             <div className="columns hero-body is-centered">
               <div className="box column is-three-quarters">
                 <ContactForm data={data} />
