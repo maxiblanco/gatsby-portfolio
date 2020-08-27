@@ -5,12 +5,14 @@ import {
   faNode,
   faJs,
   faReact,
+
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faToggleOn,
   faToggleOff,
   faEye,
   faCode,
+  faDownload
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -22,5 +24,6 @@ library.add(
   faJs,
   faReact,
   faEye,
-  faCode
+  faCode,
+  faDownload
 );

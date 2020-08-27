@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useHideAfterScroll from '../hooks/useHideAfterScroll'
 // Components
-import DarkModeToggle from './DarkModeToggle';
+/* import DarkModeToggle from './DarkModeToggle'; */
 // assets
 /* 
 import engCV from '../assets/pdf/CV_MaximilianoBlanco_ENG.pdf';
@@ -122,13 +123,23 @@ const Navbar = () => {
               type="button"
               className="button is-white is-medium has-text-weight-semibold"
             >
+              
               <a
                 download
                 href="https://github.com/maxiblanco/cv/raw/master/CV_Maximiliano_Blanco_ENG.pdf"
                 className="has-text-black"
               >
-                <p>CV</p>
+                
+                <p>
+                  CV
+                </p>
               </a>
+              <span className="icon has-text-grey mx-2">
+                <FontAwesomeIcon
+                  className="is-size-5"
+                  icon={['fas', 'download']}
+                />
+              </span>
             </button>
           </li>
           {/*           <li className="navbar-item">
