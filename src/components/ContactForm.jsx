@@ -57,43 +57,45 @@ const ContactForm = ({ data }) => {
   };
   return (
     <form onSubmit={handleOnSubmit}>
-      <h3 className="title is-3 has-text-centered">Contact me!</h3>
-      <div className="field ">
-        <label className="label" htmlFor="email">
-          <p className="mb-4 mx-1">Email</p>
-          <div className="control">
-            <input
-              className="input"
-              type="email"
-              id="email"
-              name="_replyto"
+      <h3 className="title is-3 my-4 has-text-centered">Lets talk!</h3>
+      <div className="mx-4 my-2">
+        <div className="field">
+          <label className="label" htmlFor="email">
+            <p className="mb-4 mx-1">Email</p>
+            <div className="control">
+              <input
+                className="input"
+                type="email"
+                id="email"
+                name="_replyto"
+                onChange={handleOnChange}
+                required
+                value={inputs.email}
+              />
+            </div>
+          </label>
+        </div>
+        <div className="field ">
+          <label className="label" htmlFor="message">
+            <p className="mb-4 mx-1">Message</p>
+            <textarea
+              className="textarea"
+              name="message"
+              id="message"
               onChange={handleOnChange}
               required
-              value={inputs.email}
+              value={inputs.message}
             />
-          </div>
-        </label>
-      </div>
-      <div className="field ">
-        <label className="label" htmlFor="message">
-          <p className="mb-4 mx-1">Message</p>
-          <textarea
-            className="textarea"
-            name="message"
-            id="message"
-            onChange={handleOnChange}
-            required
-            value={inputs.message}
-          />
-        </label>
-      </div>
-      <div className="field">
-        <div className="control">
-          <button
-            className="button"
-            type="submit"
-            disabled={status.submitting}>
-            {
+          </label>
+        </div>
+        <div className="field">
+          <div className="control">
+            <button
+              className="button"
+              type="submit"
+              disabled={status.submitting}
+            >
+              {
               // eslint-disable-next-line no-nested-ternary
               !status.submitting
                 ? !status.submitted
@@ -101,9 +103,11 @@ const ContactForm = ({ data }) => {
                   : 'Submitted'
                 : 'Submitting...'
             }
-          </button>
+            </button>
+          </div>
         </div>
       </div>
+ 
     </form>
   );
 };

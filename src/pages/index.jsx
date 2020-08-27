@@ -192,8 +192,9 @@ const Index = ({ data }) => {
           <p className="has-text-centered my-2">
             Made by 
             {' '}
-            <strong>Maximiliano Blanco</strong>
-            &#169; 2020
+            <strong>Maximiliano Blanco </strong>
+            {' '}
+            &#169;2020
           </p>
         </div>
         
