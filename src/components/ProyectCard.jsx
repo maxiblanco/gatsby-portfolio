@@ -104,7 +104,7 @@ const ProyectCards = () => {
                   </div>
                 </div>
               </div>
-              <p>Website made with GoogleMapsAPI to share movie locations and rental information.</p>
+              <p>Website made with GoogleMapsAPI to share movie locations for rent.</p>
             </div>
             <div className="level is-mobile">
               <div className="level-item">
